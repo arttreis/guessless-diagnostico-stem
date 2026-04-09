@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Descubra seu protocolo Stem — Quiz de Rotina</title>
+  <meta name="description" content="5 perguntas sobre sua rotina. Protocolo de suplementação personalizado. Gratuito.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://quiz.loja.stem.com.br">
+  <meta property="og:title" content="Como a Stem se encaixa na sua rotina?">
+  <meta property="og:description" content="Descubra qual protocolo Stem foi feito para o seu estilo de vida.">
+  <meta property="og:url" content="https://quiz.loja.stem.com.br">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    // TODO: Substituir pelo Pixel ID real
+    // fbq('init', 'SEU_PIXEL_ID_AQUI');
+    // fbq('track', 'PageView');
+  </script>
+
+  <!-- Google Tag -->
+  <!-- TODO: Substituir pelo ID real do Google Tag -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=SEU_ID_AQUI"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'SEU_ID_AQUI');
+  </script>
+  -->
+
+  <style>
+    /* ============================================
+       STEM Quiz — Refined Clinical Identity
+       ============================================ */
+
+    *, *::before, *::after {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+
+    :root {
+      --primary: #008dd2;
+      --primary-hover: #0077b3;
+      --primary-glow: rgba(0, 141, 210, 0.25);
+      --primary-light: rgba(0, 141, 210, 0.08);
+      --primary-soft: rgba(0, 141, 210, 0.04);
+
+      --forest: #0b2137;
+      --forest-mid: #122e4a;
+      --sage: #4a6d8c;
+      --sage-light: #7a9cb8;
+
+      --sand: #f6f1eb;
+      --warm-white: #fffefb;
+      --cream: #fdfcfa;
+
+      --gold: #ffcd57;
+      --gold-dark: #e6b84d;
+      --gold-glow: rgba(255, 205, 87, 0.15);
+
+      --ink: #1a1c20;
+      --ink-secondary: #454a52;
+      --ink-muted: #747a84;
+
+      --glass: rgba(255, 255, 255, 0.03);
+      --glass-hover: rgba(255, 255, 255, 0.06);
+      --glass-active: rgba(0, 141, 210, 0.06);
+      --glass-border: rgba(255, 255, 255, 0.06);
+      --glass-border-hover: rgba(255, 255, 255, 0.12);
+
+      --font-serif: 'Instrument Serif', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+      --s1: 0.25rem; --s2: 0.5rem; --s3: 0.75rem; --s4: 1rem;
+      --s5: 1.25rem; --s6: 1.5rem; --s8: 2rem; --s10: 2.5rem;
+      --s12: 3rem; --s16: 4rem; --s20: 5rem;
+
+      --r-sm: 8px; --r-md: 12px; --r-lg: 16px; --r-xl: 20px; --r-2xl: 28px; --r-pill: 200px;
+
+      --shadow-subtle: 0 1px 2px rgba(0,0,0,0.06);
+      --shadow-sm: 0 2px 8px rgba(11, 33, 55, 0.08);
+      --shadow-md: 0 8px 32px rgba(11, 33, 55, 0.12);
+      --shadow-glow: 0 0 40px var(--primary-glow);
+
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+      --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+      --t-fast: 150ms; --t-base: 280ms; --t-slow: 450ms;
+    }
+
+    html {
+      font-size: 100%;
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.65;
+      color: var(--ink);
+      background: var(--forest);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+      min-height: 100vh;
+      min-height: 100svh;
+    }
+
+    ::selection { background: var(--primary); color: #fff; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ── Grain ── */
+    .grain {
+      position: fixed; inset: 0; z-index: 9999; pointer-events: none; opacity: 0.02;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      background-repeat: repeat; background-size: 256px 256px;
+    }
+
+    /* ── Background ── */
+    .quiz-bg {
+      position: fixed; inset: 0; pointer-events: none; overflow: hidden; z-index: 0;
+    }
+    .quiz-bg__orb {
+      position: absolute; border-radius: 50%; filter: blur(100px);
+    }
+    .quiz-bg__orb--1 {
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(0,141,210,0.12) 0%, transparent 70%);
+      top: -200px; right: -200px;
+      animation: float-orb 14s ease-in-out infinite;
+    }
+    .quiz-bg__orb--2 {
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(255,205,87,0.05) 0%, transparent 70%);
+      bottom: -120px; left: -120px;
+      animation: float-orb 18s ease-in-out infinite reverse;
+    }
+    .quiz-bg__orb--3 {
+      width: 300px; height: 300px;
+      background: radial-gradient(circle, rgba(0,141,210,0.06) 0%, transparent 70%);
+      top: 50%; left: 50%; transform: translate(-50%, -50%);
+      animation: float-orb 20s ease-in-out infinite 3s;
+    }
+    @keyframes float-orb {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      33% { transform: translate(25px, -35px) scale(1.06); }
+      66% { transform: translate(-18px, 18px) scale(0.96); }
+    }
+
+    /* ── Subtle grid pattern ── */
+    .quiz-bg::after {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 20%, transparent 70%);
+    }
+
+    /* ── Quiz container ── */
+    .quiz {
+      position: relative; z-index: 1;
+      max-width: 620px; margin: 0 auto;
+      padding: var(--s6);
+      min-height: 100vh; min-height: 100svh;
+      display: flex; flex-direction: column; justify-content: center;
+    }
+
+    /* ── Progress bar ── */
+    .progress {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+      background: rgba(11, 33, 55, 0.65); backdrop-filter: blur(16px) saturate(1.2);
+      -webkit-backdrop-filter: blur(16px) saturate(1.2);
+      padding: var(--s3) var(--s6);
+      display: none;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+    .progress.visible { display: block; animation: fadeDown 300ms var(--ease-out); }
+    @keyframes fadeDown { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
+    .progress__label {
+      font-size: 0.68rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.16em; color: rgba(255,255,255,0.4);
+      margin-bottom: 6px; text-align: center;
+    }
+    .progress__track {
+      height: 3px; background: rgba(255,255,255,0.06); border-radius: 3px; overflow: hidden;
+      position: relative;
+    }
+    .progress__fill {
+      height: 100%; border-radius: 3px;
+      width: 0%;
+      background: linear-gradient(90deg, var(--primary), #30b8ff);
+      transition: width 600ms var(--ease-smooth);
+      position: relative;
+    }
+    .progress__fill::after {
+      content: '';
+      position: absolute; right: 0; top: -2px; bottom: -2px; width: 20px;
+      background: rgba(48, 184, 255, 0.6);
+      border-radius: 50%;
+      filter: blur(4px);
+    }
+
+    /* ── Screens ── */
+    .screen {
+      display: none; opacity: 0;
+      transform: translateX(20px);
+    }
+    .screen.active {
+      display: block; opacity: 1; transform: translateX(0);
+      animation: slideIn 350ms var(--ease-out);
+    }
+    .screen.exiting {
+      animation: slideOut 220ms ease-in forwards;
+    }
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(20px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes slideOut {
+      from { opacity: 1; transform: translateX(0); }
+      to { opacity: 0; transform: translateX(-20px); }
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* ── Screen 0 — Intro ── */
+    .intro { text-align: center; }
+    .intro__badge {
+      display: inline-flex; align-items: center; gap: var(--s2);
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--sage-light);
+      margin-bottom: var(--s8);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--r-pill);
+      padding: 0.4rem 1rem;
+    }
+    .intro__badge-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--primary);
+      box-shadow: 0 0 8px var(--primary-glow);
+      animation: pulse-dot 2s ease-in-out infinite;
+    }
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; box-shadow: 0 0 8px var(--primary-glow); }
+      50% { opacity: 0.4; box-shadow: 0 0 2px var(--primary-glow); }
+    }
+
+    .intro__title {
+      font-family: var(--font-serif); font-weight: 400;
+      font-size: clamp(2.1rem, 5.5vw, 3.2rem); line-height: 1.08;
+      color: var(--warm-white); margin-bottom: var(--s5);
+      letter-spacing: -0.01em;
+    }
+    .intro__title em {
+      font-style: italic;
+      background: linear-gradient(135deg, var(--gold) 0%, #ffe49a 50%, var(--gold) 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shimmer 4s ease-in-out infinite;
+    }
+    @keyframes shimmer {
+      0%, 100% { background-position: 0% center; }
+      50% { background-position: 200% center; }
+    }
+
+    .intro__subtitle {
+      font-size: clamp(0.95rem, 2vw, 1.08rem);
+      color: rgba(255,255,255,0.45); line-height: 1.7;
+      max-width: 400px; margin: 0 auto var(--s10);
+      font-weight: 400;
+    }
+
+    /* ── Buttons ── */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: var(--s3);
+      font-family: var(--font-sans); font-weight: 600; font-size: 0.92rem;
+      letter-spacing: 0.01em; border: none; border-radius: var(--r-pill);
+      padding: 0.9rem 2rem; cursor: pointer;
+      transition: all var(--t-base) var(--ease-out);
+      text-align: center; line-height: 1; position: relative;
+    }
+    .btn--primary {
+      background: var(--primary); color: var(--warm-white);
+      box-shadow: 0 2px 16px var(--primary-glow), var(--shadow-subtle);
+    }
+    .btn--primary:hover {
+      background: var(--primary-hover);
+      box-shadow: 0 4px 28px var(--primary-glow), var(--shadow-sm);
+      transform: translateY(-2px);
+    }
+    .btn--primary:active { transform: translateY(0); }
+    .btn--primary:disabled, .btn--primary.disabled {
+      opacity: 0.3; pointer-events: none; cursor: not-allowed;
+    }
+    .btn--lg {
+      padding: 1rem 2.5rem; font-size: 1rem;
+    }
+
+    /* Intro CTA pulse ring */
+    .btn--pulse {
+      animation: btn-pulse 2.5s ease-in-out infinite;
+    }
+    @keyframes btn-pulse {
+      0%, 100% { box-shadow: 0 2px 16px var(--primary-glow), 0 0 0 0 rgba(0,141,210,0.2); }
+      50% { box-shadow: 0 4px 28px var(--primary-glow), 0 0 0 12px rgba(0,141,210,0); }
+    }
+
+    .btn--secondary {
+      background: transparent; color: rgba(255,255,255,0.45);
+      border: 1px solid rgba(255,255,255,0.1); padding: 0.65rem 1.5rem; font-size: 0.82rem;
+    }
+    .btn--secondary:hover { color: var(--warm-white); border-color: rgba(255,255,255,0.25); }
+    .btn--loading .btn__text { visibility: hidden; }
+    .btn--loading::after {
+      content: ''; position: absolute;
+      width: 18px; height: 18px; border: 2px solid rgba(255,255,255,0.25);
+      border-top-color: #fff; border-radius: 50%;
+      animation: spin 0.6s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── Proof items ── */
+    .intro__proof {
+      display: flex; flex-direction: column; gap: var(--s3);
+      align-items: center; margin-top: var(--s10);
+    }
+    .intro__proof-item {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 0.78rem; color: rgba(255,255,255,0.3);
+      font-weight: 500;
+    }
+    .intro__proof-item svg { color: var(--primary); opacity: 0.6; flex-shrink: 0; }
+
+    /* ── Question header ── */
+    .q-header {
+      font-family: var(--font-serif); font-weight: 400;
+      font-size: clamp(1.5rem, 3.5vw, 2rem); line-height: 1.15;
+      color: var(--warm-white); margin-bottom: var(--s8);
+      text-align: center; letter-spacing: -0.01em;
+    }
+
+    /* ── Grid 2x2 ── */
+    .grid-2x2 {
+      display: grid; grid-template-columns: 1fr 1fr; gap: var(--s3);
+    }
+    @media (max-width: 480px) {
+      .grid-2x2 { grid-template-columns: 1fr; }
+    }
+
+    /* ── Option card ── */
+    .opt-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--r-xl); padding: var(--s5) var(--s5) var(--s5);
+      cursor: pointer; position: relative;
+      transition: all var(--t-base) var(--ease-out);
+      backdrop-filter: blur(4px);
+    }
+    .opt-card:hover {
+      background: var(--glass-hover);
+      border-color: var(--glass-border-hover);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+    .opt-card.selected {
+      border-color: rgba(0,141,210,0.4);
+      background: var(--glass-active);
+      box-shadow: 0 0 24px rgba(0,141,210,0.08), inset 0 1px 0 rgba(0,141,210,0.1);
+    }
+    .opt-card.selected .opt-card__check {
+      transform: scale(1); opacity: 1;
+    }
+    .opt-card__icon {
+      font-size: 1.5rem; margin-bottom: var(--s2);
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+    }
+    .opt-card__title {
+      font-weight: 600; font-size: 0.88rem;
+      color: var(--warm-white); margin-bottom: 2px;
+      line-height: 1.3;
+    }
+    .opt-card__desc {
+      font-size: 0.78rem; color: rgba(255,255,255,0.38); line-height: 1.5;
+    }
+    .opt-card__check {
+      position: absolute; top: 10px; right: 10px;
+      width: 20px; height: 20px; border-radius: 50%;
+      background: var(--primary);
+      display: flex; align-items: center; justify-content: center;
+      transform: scale(0.5); opacity: 0;
+      transition: all var(--t-base) var(--ease-spring);
+      box-shadow: 0 2px 8px var(--primary-glow);
+    }
+    .opt-card__check svg { width: 11px; height: 11px; color: #fff; }
+
+    /* Staggered entrance for cards */
+    .screen.active .opt-card,
+    .screen.active .vlist-item,
+    .screen.active .pill {
+      animation: fadeUp 350ms var(--ease-out) both;
+    }
+    .screen.active .opt-card:nth-child(1),
+    .screen.active .vlist-item:nth-child(1),
+    .screen.active .pill:nth-child(1) { animation-delay: 80ms; }
+    .screen.active .opt-card:nth-child(2),
+    .screen.active .vlist-item:nth-child(2),
+    .screen.active .pill:nth-child(2) { animation-delay: 140ms; }
+    .screen.active .opt-card:nth-child(3),
+    .screen.active .vlist-item:nth-child(3),
+    .screen.active .pill:nth-child(3) { animation-delay: 200ms; }
+    .screen.active .opt-card:nth-child(4),
+    .screen.active .vlist-item:nth-child(4),
+    .screen.active .pill:nth-child(4) { animation-delay: 260ms; }
+    .screen.active .vlist-item:nth-child(5),
+    .screen.active .pill:nth-child(5) { animation-delay: 320ms; }
+
+    /* ── Pills (multi-select) ── */
+    .pills { display: flex; flex-wrap: wrap; gap: var(--s3); justify-content: center; }
+    .pill {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--r-pill); padding: 0.55rem 1.1rem;
+      font-size: 0.84rem; color: rgba(255,255,255,0.6);
+      cursor: pointer; transition: all var(--t-base) var(--ease-out);
+      user-select: none; font-weight: 500;
+    }
+    .pill:hover {
+      background: var(--glass-hover);
+      border-color: var(--glass-border-hover);
+      color: rgba(255,255,255,0.8);
+    }
+    .pill.selected {
+      background: var(--glass-active);
+      border-color: rgba(0,141,210,0.35);
+      color: var(--warm-white);
+      box-shadow: 0 0 12px rgba(0,141,210,0.06);
+      transform: scale(1.03);
+    }
+
+    /* ── Vertical list ── */
+    .vlist { display: flex; flex-direction: column; gap: var(--s3); }
+    .vlist-item {
+      display: flex; align-items: center; gap: var(--s4);
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--r-lg); padding: var(--s4) var(--s5);
+      cursor: pointer; transition: all var(--t-base) var(--ease-out);
+    }
+    .vlist-item:hover {
+      background: var(--glass-hover);
+      border-color: var(--glass-border-hover);
+      transform: translateX(4px);
+    }
+    .vlist-item.selected {
+      border-color: rgba(0,141,210,0.35);
+      background: var(--glass-active);
+      box-shadow: 0 0 16px rgba(0,141,210,0.06);
+    }
+    .vlist-item__icon { font-size: 1.2rem; flex-shrink: 0; }
+    .vlist-item__text { font-size: 0.88rem; color: rgba(255,255,255,0.7); font-weight: 500; }
+    .vlist-item.selected .vlist-item__text { color: var(--warm-white); }
+
+    /* ── Next button wrapper ── */
+    .nav-btn { text-align: center; margin-top: var(--s8); }
+
+    /* ── Email capture ── */
+    .capture { text-align: center; }
+    .capture__icon {
+      width: 48px; height: 48px; border-radius: 50%;
+      background: var(--primary-light); border: 1px solid rgba(0,141,210,0.12);
+      display: inline-flex; align-items: center; justify-content: center;
+      margin-bottom: var(--s5);
+      color: var(--primary);
+    }
+    .capture__title {
+      font-family: var(--font-serif); font-weight: 400;
+      font-size: clamp(1.5rem, 3.5vw, 2rem); line-height: 1.15;
+      color: var(--warm-white); margin-bottom: var(--s2);
+    }
+    .capture__sub {
+      font-size: 0.88rem; color: rgba(255,255,255,0.4); margin-bottom: var(--s8);
+    }
+    .capture__form { max-width: 380px; margin: 0 auto; }
+    .capture__input-wrap {
+      position: relative; margin-bottom: var(--s3);
+    }
+    .capture__input-icon {
+      position: absolute; left: var(--s4); top: 50%; transform: translateY(-50%);
+      color: rgba(255,255,255,0.2); pointer-events: none;
+      transition: color var(--t-fast);
+    }
+    .capture__field {
+      display: block; width: 100%;
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--r-md); padding: 0.85rem var(--s4) 0.85rem 2.75rem;
+      font-family: var(--font-sans); font-size: 0.92rem;
+      color: var(--warm-white); outline: none;
+      transition: all var(--t-base) var(--ease-out);
+    }
+    .capture__field::placeholder { color: rgba(255,255,255,0.25); }
+    .capture__field:focus {
+      border-color: rgba(0,141,210,0.4);
+      background: rgba(0,141,210,0.04);
+      box-shadow: 0 0 0 3px rgba(0,141,210,0.08);
+    }
+    .capture__field:focus + .capture__input-icon,
+    .capture__input-wrap:focus-within .capture__input-icon {
+      color: var(--primary);
+    }
+
+    .capture__trust {
+      display: flex; align-items: center; justify-content: center; gap: var(--s5);
+      margin-top: var(--s5); margin-bottom: var(--s3);
+    }
+    .capture__trust-item {
+      display: flex; align-items: center; gap: 4px;
+      font-size: 0.68rem; color: rgba(255,255,255,0.25);
+      font-weight: 500;
+    }
+    .capture__trust-item svg { width: 12px; height: 12px; opacity: 0.5; }
+
+    .capture__legal {
+      font-size: 0.68rem; color: rgba(255,255,255,0.2);
+      margin-top: var(--s4);
+    }
+
+    /* ── Result screen ── */
+    .result { animation: fadeUp 450ms var(--ease-out); }
+
+    .result__badge {
+      display: inline-flex; align-items: center; gap: var(--s2);
+      background: linear-gradient(135deg, rgba(0,141,210,0.1), rgba(0,141,210,0.04));
+      border: 1px solid rgba(0,141,210,0.18);
+      border-radius: var(--r-pill); padding: 0.35rem 0.9rem;
+      font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.12em; color: var(--primary);
+      margin-bottom: var(--s5);
+      animation: fadeIn 500ms var(--ease-out) 100ms both;
+    }
+    .result__badge::before {
+      content: ''; width: 5px; height: 5px; border-radius: 50%;
+      background: var(--primary); box-shadow: 0 0 6px var(--primary-glow);
+    }
+
+    .result__title {
+      font-family: var(--font-serif); font-weight: 400;
+      font-size: clamp(1.8rem, 4.5vw, 2.6rem); line-height: 1.08;
+      color: var(--warm-white); margin-bottom: var(--s2);
+      letter-spacing: -0.01em;
+      animation: fadeUp 500ms var(--ease-out) 200ms both;
+    }
+    .result__tagline {
+      font-size: 0.95rem; color: rgba(255,255,255,0.5);
+      margin-bottom: var(--s2); font-style: italic;
+      font-family: var(--font-serif);
+      animation: fadeUp 500ms var(--ease-out) 300ms both;
+    }
+    .result__context {
+      font-size: 0.78rem; color: rgba(255,255,255,0.25);
+      margin-bottom: var(--s8);
+      animation: fadeUp 500ms var(--ease-out) 400ms both;
+    }
+
+    /* Moment box */
+    .moment-box {
+      background: linear-gradient(135deg, rgba(0,141,210,0.06), rgba(0,141,210,0.02));
+      border: 1px solid rgba(0,141,210,0.12);
+      border-radius: var(--r-xl); padding: var(--s5) var(--s5);
+      margin-bottom: var(--s8); display: flex; gap: var(--s3); align-items: flex-start;
+      animation: fadeUp 500ms var(--ease-out) 500ms both;
+    }
+    .moment-box__icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 1px; }
+    .moment-box__text {
+      font-size: 0.86rem; color: rgba(255,255,255,0.65); line-height: 1.6;
+    }
+
+    /* Product list */
+    .products {
+      margin-bottom: var(--s8);
+      animation: fadeUp 500ms var(--ease-out) 600ms both;
+    }
+    .products__title {
+      font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.14em; color: rgba(0,141,210,0.7); margin-bottom: var(--s4);
+    }
+    .product-item {
+      display: flex; gap: var(--s4); align-items: flex-start;
+      padding: var(--s4) var(--s4);
+      border-radius: var(--r-md);
+      transition: background var(--t-fast);
+      margin-bottom: 2px;
+    }
+    .product-item:hover { background: rgba(255,255,255,0.02); }
+    .product-item__marker {
+      width: 3px; height: 100%; min-height: 36px;
+      border-radius: 3px; flex-shrink: 0;
+    }
+    .product-item__marker--1 { background: var(--primary); }
+    .product-item__marker--2 { background: var(--gold); }
+    .product-item__marker--3 { background: var(--sage-light); }
+    .product-item__name {
+      font-weight: 600; font-size: 0.88rem; color: var(--warm-white);
+      margin-bottom: 1px;
+    }
+    .product-item__benefit {
+      font-size: 0.78rem; color: rgba(255,255,255,0.4); line-height: 1.5;
+    }
+    .product-item__line {
+      display: inline-block; font-size: 0.58rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.1em;
+      background: rgba(255,255,255,0.04); color: rgba(255,255,255,0.3);
+      padding: 2px 8px; border-radius: var(--r-pill); margin-top: 4px;
+    }
+
+    /* Coupon */
+    .coupon-box {
+      background: linear-gradient(135deg, rgba(0,141,210,0.05), rgba(0,141,210,0.02));
+      border: 1px solid rgba(0,141,210,0.1);
+      border-radius: var(--r-xl); padding: var(--s5) var(--s6);
+      text-align: center; margin-bottom: var(--s8);
+      position: relative; overflow: hidden;
+      animation: fadeUp 500ms var(--ease-out) 700ms both;
+    }
+    .coupon-box::before {
+      content: '';
+      position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+      background: conic-gradient(from 0deg, transparent 0%, rgba(0,141,210,0.04) 10%, transparent 20%);
+      animation: coupon-rotate 8s linear infinite;
+    }
+    @keyframes coupon-rotate { to { transform: rotate(360deg); } }
+
+    .coupon-box__label {
+      font-size: 0.78rem; color: rgba(255,255,255,0.4); margin-bottom: var(--s3);
+      position: relative;
+    }
+    .coupon-box__code {
+      font-family: var(--font-sans); font-size: 1.4rem; font-weight: 700;
+      letter-spacing: 0.1em; color: var(--primary);
+      background: rgba(0,141,210,0.08); border: 1px dashed rgba(0,141,210,0.2);
+      border-radius: var(--r-md);
+      padding: var(--s3) var(--s6); display: inline-block; margin-bottom: var(--s2);
+      position: relative; cursor: pointer;
+      transition: all var(--t-base) var(--ease-out);
+    }
+    .coupon-box__code:hover {
+      background: rgba(0,141,210,0.12);
+      transform: scale(1.02);
+    }
+    .coupon-box__code.copied {
+      background: rgba(40,167,69,0.12);
+      border-color: rgba(40,167,69,0.3);
+      color: #5dd57a;
+    }
+    .coupon-box__copy-hint {
+      font-size: 0.65rem; color: rgba(255,255,255,0.25);
+      margin-bottom: var(--s1); position: relative;
+    }
+    .coupon-box__validity {
+      font-size: 0.68rem; color: rgba(255,255,255,0.2);
+      position: relative;
+    }
+
+    /* CTA section */
+    .result__cta {
+      text-align: center; margin-top: var(--s6);
+      animation: fadeUp 500ms var(--ease-out) 800ms both;
+    }
+    .result__cta .btn {
+      margin-bottom: var(--s4);
+      width: 100%; max-width: 340px;
+    }
+    .result__cta .btn--primary {
+      animation: btn-pulse 2.5s ease-in-out infinite;
+      animation-delay: 1.5s;
+    }
+    .result__restart {
+      display: inline-block; font-size: 0.78rem;
+      color: rgba(255,255,255,0.3); cursor: pointer;
+      transition: color var(--t-fast);
+      font-weight: 500;
+    }
+    .result__restart:hover { color: rgba(255,255,255,0.6); }
+
+    /* ── Footer ── */
+    .quiz-footer {
+      text-align: center; padding: var(--s8) 0 var(--s4);
+      font-size: 0.68rem; color: rgba(255,255,255,0.1);
+      letter-spacing: 0.03em;
+    }
+
+    /* ── Responsive ── */
+    @media (min-width: 768px) {
+      .intro__proof { flex-direction: row; gap: var(--s6); }
+    }
+    @media (max-width: 380px) {
+      .quiz { padding: var(--s4); }
+      .opt-card { padding: var(--s4); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="quiz-bg" aria-hidden="true">
+    <div class="quiz-bg__orb quiz-bg__orb--1"></div>
+    <div class="quiz-bg__orb quiz-bg__orb--2"></div>
+    <div class="quiz-bg__orb quiz-bg__orb--3"></div>
+  </div>
+
+  <!-- Progress -->
+  <div class="progress" id="progress">
+    <div class="progress__label" id="progressLabel">Pergunta 1 de 5</div>
+    <div class="progress__track"><div class="progress__fill" id="progressFill"></div></div>
+  </div>
+
+  <main class="quiz">
+
+    <!-- TELA 0 — Entrada -->
+    <section class="screen active" data-screen="0">
+      <div class="intro">
+        <div class="intro__badge">
+          <span class="intro__badge-dot"></span>
+          Quiz de Rotina
+        </div>
+        <h1 class="intro__title">
+          Descubra como a Stem se encaixa na <em>sua rotina</em>
+        </h1>
+        <p class="intro__subtitle">5 perguntas. Protocolo personalizado. Gratuito.</p>
+        <button class="btn btn--primary btn--lg btn--pulse" onclick="startQuiz()">
+          <span class="btn__text">Começar agora</span>
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3.75 9h10.5m0 0L9.75 4.5M14.25 9l-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="intro__proof">
+          <div class="intro__proof-item">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M2 8.5l4 4 8-8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Registro ANVISA</span>
+          </div>
+          <div class="intro__proof-item">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M2 8.5l4 4 8-8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Produção farmacêutica própria</span>
+          </div>
+          <div class="intro__proof-item">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M2 8.5l4 4 8-8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Baseado em evidência clínica</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TELA 1 — P1 Estilo de vida -->
+    <section class="screen" data-screen="1">
+      <h2 class="q-header">Como você descreveria seu dia a dia?</h2>
+      <div class="grid-2x2" data-question="p1">
+        <div class="opt-card" data-value="A" onclick="selectSingle(this)">
+          <div class="opt-card__check"><svg viewBox="0 0 16 16" fill="none"><path d="M2 8.5l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="opt-card__icon">💻</div>
+          <div class="opt-card__title">Trabalho intenso</div>
+          <div class="opt-card__desc">Foco, tela, reuniões. Pouco tempo para mim.</div>
+        </div>
+        <div class="opt-card" data-value="B" onclick="selectSingle(this)">
+          <div class="opt-card__check"><svg viewBox="0 0 16 16" fill="none"><path d="M2 8.5l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="opt-card__icon">🏃</div>
+          <div class="opt-card__title">Rotina ativa</div>
+          <div class="opt-card__desc">Treino, movimento e performance fazem parte do meu dia.</div>
+        </div>
+        <div class="opt-card" data-value="C" onclick="selectSingle(this)">
+          <div class="opt-card__check"><svg viewBox="0 0 16 16" fill="none"><path d="M2 8.5l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="opt-card__icon">🏠</div>
+          <div class="opt-card__title">Cuido da casa e da família</div>
+          <div class="opt-card__desc">Minha energia vai toda para os outros.</div>
+        </div>
+        <div class="opt-card" data-value="D" onclick="selectSingle(this)">
+          <div class="opt-card__check"><svg viewBox="0 0 16 16" fill="none"><path d="M2 8.5l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="opt-card__icon">🔀</div>
+          <div class="opt-card__title">Mistura de tudo</div>
+          <div class="opt-card__desc">Cada dia é um dia. Não tenho rotina fixa.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TELA 2 — P2 Pico de desgaste -->
+    <section class="screen" data-screen="2">
+      <h2 class="q-header">Quando seu corpo mais pede atenção?</h2>
+      <div class="grid-2x2" data-question="p2">
+        <div class="opt-card" data-value="A" onclick="selectSingle(this)">
+          <div class="opt-card__check"><svg viewBox="0 0 16 16" fill="none"><path d="M2 8.5l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="opt-card__icon">🌅</div>
+          <div class="opt-card__title">De manhã</div>
+          <div class="opt-card__desc">Acordo sem energia. O dia começa pesado.</div>
+        </div>
+        <div class="opt-card" data-value="B" onclick="selectSingle(this)">
+          <div class="opt-card__check"><svg viewBox="0 0 16 16" fill="none"><path d="M2 8.5l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="opt-card__icon">🕒</div>
+          <div class="opt-card__title">À tarde</div>
+          <div class="opt-card__desc">Depois do almoço, concentração e disposição caem.</div>
+        </div>
+        <div class="opt-card" data-value="C" onclick="selectSingle(this)">
+          <div class="opt-card__check"><svg viewBox="0 0 16 16" fill="none"><path d="M2 8.5l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="opt-card__icon">🌙</div>
+          <div class="opt-card__title">À noite</div>
+          <div class="opt-card__desc">Corpo cansado, mente acelerada. Difícil desligar.</div>
+        </div>
+        <div class="opt-card" data-value="D" onclick="selectSingle(this)">
+          <div class="opt-card__check"><svg viewBox="0 0 16 16" fill="none"><path d="M2 8.5l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="opt-card__icon">💪</div>
+          <div class="opt-card__title">Depois do treino</div>
+          <div class="opt-card__desc">Recuperação lenta. Dor muscular frequente.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TELA 3 — P3 Cuidado atual (multi) -->
+    <section class="screen" data-screen="3">
+      <h2 class="q-header">O que você já faz pela sua saúde?</h2>
+      <div class="pills" data-question="p3">
+        <span class="pill" data-value="treino" onclick="togglePill(this)">Treino regularmente</span>
+        <span class="pill" data-value="alimentacao" onclick="togglePill(this)">Cuido da alimentação</span>
+        <span class="pill" data-value="sono" onclick="togglePill(this)">Tenho boa rotina de sono</span>
+        <span class="pill" data-value="medico" onclick="togglePill(this)">Faço acompanhamento médico</span>
+        <span class="pill" data-value="construindo" onclick="togglePill(this)">Ainda estou construindo esses hábitos</span>
+      </div>
+      <div class="nav-btn">
+        <button class="btn btn--primary" id="btnP3" onclick="goToScreen(4)" disabled>Próxima</button>
+      </div>
+    </section>
+
+    <!-- TELA 4 — P4 O que proteger -->
+    <section class="screen" data-screen="4">
+      <h2 class="q-header">Nos próximos meses, o que você mais quer cuidar?</h2>
+      <div class="grid-2x2" data-question="p4">
+        <div class="opt-card" data-value="A" onclick="selectSingle(this)">
+          <div class="opt-card__check"><svg viewBox="0 0 16 16" fill="none"><path d="M2 8.5l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="opt-card__icon">✨</div>
+          <div class="opt-card__title">Minha pele, cabelo e como me vejo</div>
+          <div class="opt-card__desc">Firmeza, hidratação, aparência.</div>
+        </div>
+        <div class="opt-card" data-value="B" onclick="selectSingle(this)">
+          <div class="opt-card__check"><svg viewBox="0 0 16 16" fill="none"><path d="M2 8.5l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="opt-card__icon">⚡</div>
+          <div class="opt-card__title">Minha energia e imunidade</div>
+          <div class="opt-card__desc">Disposição, menos gripes, menos cansaço.</div>
+        </div>
+        <div class="opt-card" data-value="C" onclick="selectSingle(this)">
+          <div class="opt-card__check"><svg viewBox="0 0 16 16" fill="none"><path d="M2 8.5l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="opt-card__icon">🏆</div>
+          <div class="opt-card__title">Minha performance e resultados</div>
+          <div class="opt-card__desc">Treino, força, recuperação, foco.</div>
+        </div>
+        <div class="opt-card" data-value="D" onclick="selectSingle(this)">
+          <div class="opt-card__check"><svg viewBox="0 0 16 16" fill="none"><path d="M2 8.5l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="opt-card__icon">🌿</div>
+          <div class="opt-card__title">Minha saúde a longo prazo</div>
+          <div class="opt-card__desc">Articulações, longevidade, envelhecer bem.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TELA 5 — P5 Horário -->
+    <section class="screen" data-screen="5">
+      <h2 class="q-header">Como você prefere incluir um suplemento no seu dia?</h2>
+      <div class="vlist" data-question="p5">
+        <div class="vlist-item" data-value="A" onclick="selectSingle(this)">
+          <span class="vlist-item__icon">☕</span>
+          <span class="vlist-item__text">Com o café da manhã, sem complicação</span>
+        </div>
+        <div class="vlist-item" data-value="B" onclick="selectSingle(this)">
+          <span class="vlist-item__icon">🥗</span>
+          <span class="vlist-item__text">Com a refeição principal do dia</span>
+        </div>
+        <div class="vlist-item" data-value="C" onclick="selectSingle(this)">
+          <span class="vlist-item__icon">🏋️</span>
+          <span class="vlist-item__text">Antes ou depois do treino</span>
+        </div>
+        <div class="vlist-item" data-value="D" onclick="selectSingle(this)">
+          <span class="vlist-item__icon">🌙</span>
+          <span class="vlist-item__text">À noite, como ritual de cuidado</span>
+        </div>
+        <div class="vlist-item" data-value="E" onclick="selectSingle(this)">
+          <span class="vlist-item__icon">🤷</span>
+          <span class="vlist-item__text">Ainda não tenho horário definido</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- TELA 6 — Captura email -->
+    <section class="screen" data-screen="6">
+      <div class="capture">
+        <div class="capture__icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <h2 class="capture__title">Quase lá. Onde enviamos seu protocolo?</h2>
+        <p class="capture__sub">Resultado personalizado direto no seu e-mail.</p>
+        <div class="capture__form">
+          <div class="capture__input-wrap">
+            <input type="text" class="capture__field" id="inputName" placeholder="Seu nome" autocomplete="given-name" oninput="validateCapture()">
+            <svg class="capture__input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div class="capture__input-wrap">
+            <input type="email" class="capture__field" id="inputEmail" placeholder="Seu melhor e-mail" autocomplete="email" oninput="validateCapture()">
+            <svg class="capture__input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          </div>
+          <button class="btn btn--primary btn--lg" id="btnSubmit" onclick="submitLead()" disabled style="width:100%; margin-top: var(--s2)">
+            <span class="btn__text">Ver meu protocolo</span>
+          </button>
+          <div class="capture__trust">
+            <span class="capture__trust-item">
+              <svg viewBox="0 0 16 16" fill="none"><path d="M8 1L2 4v4.5c0 3.5 2.5 5.6 6 7 3.5-1.4 6-3.5 6-7V4L8 1z" stroke="currentColor" stroke-width="1.2"/></svg>
+              Dados seguros
+            </span>
+            <span class="capture__trust-item">
+              <svg viewBox="0 0 16 16" fill="none"><path d="M2 8.5l4 4 8-8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Sem spam
+            </span>
+            <span class="capture__trust-item">
+              <svg viewBox="0 0 16 16" fill="none"><path d="M4.5 8.5L7 11l5-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Cancele quando quiser
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TELA 7 — Resultado -->
+    <section class="screen" data-screen="7">
+      <div class="result" id="resultContent">
+        <!-- Filled by JS -->
+      </div>
+    </section>
+
+    <div class="quiz-footer">
+      STEM Pharmaceutical &middot; Registro ANVISA &middot; Produção própria
+    </div>
+  </main>
+
+  <script>
+  (function() {
+    'use strict';
+
+    // ── CONFIG ──
+    var RD_ENDPOINT = ''; // TODO: URL da RD Station
+    var RD_TOKEN = ''; // TODO: Bearer token
+
+    // ── STATE ──
+    var state = { screen: 0, answers: {}, name: '', email: '' };
+
+    // ── PROTOCOLS ──
+    var protocols = {
+      beauty: {
+        name: 'Protocolo Pele e Beleza Ativa',
+        tagline: 'Ciência para quem cuida de dentro para fora',
+        slug: 'protocolo_beauty',
+        coupon: 'BEAUTY10',
+        products: [
+          { name: 'Colágeno Hidrolisado VERISOL\u00ae', benefit: 'Firmeza e elasticidade da pele', line: 'Beauty' },
+          { name: 'HialuSkin \u00c1cido Hialur\u00f4nico 150mg', benefit: 'Hidrata\u00e7\u00e3o profunda', line: 'Beauty' },
+          { name: 'Biotina Plus', benefit: 'Cabelo, pele e unhas', line: 'Nutrition' }
+        ],
+        moments: {
+          A: 'Tome com o caf\u00e9 da manh\u00e3. 30 dias para sentir a diferen\u00e7a na textura da pele.',
+          B: 'Inclua na refei\u00e7\u00e3o principal. A absor\u00e7\u00e3o do col\u00e1geno \u00e9 potencializada com vitamina C.',
+          D: 'Fa\u00e7a do momento noturno um ritual. Col\u00e1geno + hialur\u00f4nico antes de dormir.',
+          default: 'Escolha um hor\u00e1rio fixo por dia. Consist\u00eancia \u00e9 o que gera resultado.'
+        },
+        tags: ['protocolo_beauty', 'cluster_nunca', 'origem_quiz', 'lead_qualificado']
+      },
+      saude: {
+        name: 'Protocolo Energia e Imunidade',
+        tagline: 'Suporte di\u00e1rio para quem n\u00e3o pode parar',
+        slug: 'protocolo_saude',
+        coupon: 'SAUDE10',
+        products: [
+          { name: 'Triple \u00d4mega 3-6-9 1000mg', benefit: 'Anti-inflamat\u00f3rio e sa\u00fade cardiovascular', line: 'Nutrition' },
+          { name: 'Zinco 29,59mg', benefit: 'Defesa imunol\u00f3gica e energia celular', line: 'Nutrition' },
+          { name: 'Complexo B', benefit: 'Suporte ao sistema nervoso e imunidade', line: 'Nutrition' }
+        ],
+        moments: {
+          A: 'Com o caf\u00e9 da manh\u00e3. \u00d4mega 3 tem melhor absor\u00e7\u00e3o com gordura boa.',
+          B: 'Com o almo\u00e7o ou jantar. Zinco \u00e9 melhor absorvido longe de lactic\u00ednios.',
+          D: '\u00c0 noite, o Complexo B apoia a recupera\u00e7\u00e3o enquanto voc\u00ea dorme.',
+          default: 'Qualquer refei\u00e7\u00e3o serve. O importante \u00e9 criar o h\u00e1bito.'
+        },
+        tags: ['protocolo_saude', 'cluster_nunca', 'origem_quiz', 'lead_qualificado']
+      },
+      performance: {
+        name: 'Protocolo Performance e Recupera\u00e7\u00e3o',
+        tagline: 'Para quem treina com inten\u00e7\u00e3o e quer resultado real',
+        slug: 'protocolo_performance',
+        coupon: 'PERF10',
+        products: [
+          { name: 'Creatina em P\u00f3', benefit: 'For\u00e7a, pot\u00eancia e recupera\u00e7\u00e3o muscular', line: 'Performance' },
+          { name: 'Cafe\u00edna TERMO 200mg', benefit: 'Energia e foco antes do treino', line: 'Performance' },
+          { name: 'Triple \u00d4mega 3-6-9 1000mg', benefit: 'Anti-inflama\u00e7\u00e3o e recupera\u00e7\u00e3o p\u00f3s-treino', line: 'Nutrition' }
+        ],
+        moments: {
+          C: 'Cafe\u00edna 30min antes do treino. Creatina logo depois, com \u00e1gua. \u00d4mega com a refei\u00e7\u00e3o.',
+          A: 'Creatina no caf\u00e9 da manh\u00e3. Cafe\u00edna antes do treino. \u00d4mega no almo\u00e7o.',
+          default: 'Cafe\u00edna pr\u00e9-treino, creatina p\u00f3s-treino, \u00f4mega na refei\u00e7\u00e3o principal.'
+        },
+        tags: ['protocolo_performance', 'cluster_nunca', 'origem_quiz', 'lead_qualificado']
+      },
+      longevidade: {
+        name: 'Protocolo Longevidade Ativa',
+        tagline: 'Para quem pensa no longo prazo e quer continuar ativo',
+        slug: 'protocolo_longevidade',
+        coupon: 'LONG10',
+        products: [
+          { name: 'Coenzima Q10 e Col\u00e1geno', benefit: 'Energia celular e sa\u00fade articular', line: 'Clinical' },
+          { name: 'Dimagn\u00e9sio Malato + Vitamina K2 (MK-7)', benefit: 'Ossos, m\u00fasculos e mobilidade', line: 'Clinical' },
+          { name: '\u00d3leo de Linha\u00e7a 1000mg', benefit: 'Sa\u00fade cardiovascular e anti-inflama\u00e7\u00e3o', line: 'Nutrition' }
+        ],
+        moments: {
+          A: 'Com o caf\u00e9 da manh\u00e3. Q10 tem melhor absor\u00e7\u00e3o com refei\u00e7\u00e3o gordurosa.',
+          B: 'Com o almo\u00e7o ou jantar. Todos esses ativos se beneficiam da refei\u00e7\u00e3o.',
+          D: 'Dimagn\u00e9sio \u00e0 noite potencializa o sono e a recupera\u00e7\u00e3o muscular.',
+          default: 'Distribua ao longo do dia. Q10 pela manh\u00e3, magn\u00e9sio \u00e0 noite.'
+        },
+        tags: ['protocolo_longevidade', 'cluster_nunca', 'origem_quiz', 'lead_qualificado']
+      }
+    };
+
+    var p1Labels = { A: 'trabalho intenso', B: 'rotina ativa', C: 'cuidados com a fam\u00edlia', D: 'rotina mista' };
+
+    // ── TRACKING ──
+    function trackEvent(name, params) {
+      try {
+        if (typeof gtag === 'function') gtag('event', name, params || {});
+        if (typeof fbq === 'function') fbq('trackCustom', name, params || {});
+      } catch(e) {}
+      console.log('[Quiz Event]', name, params || {});
+    }
+
+    // ── NAVIGATION ──
+    window.startQuiz = function() {
+      trackEvent('quiz_start');
+      goToScreen(1);
+    };
+
+    window.goToScreen = function(n) {
+      var current = document.querySelector('.screen.active');
+      if (!current) return;
+
+      current.classList.add('exiting');
+      current.classList.remove('active');
+
+      setTimeout(function() {
+        current.classList.remove('exiting');
+        current.style.display = 'none';
+
+        var next = document.querySelector('[data-screen="' + n + '"]');
+        next.style.display = 'block';
+        void next.offsetWidth;
+        next.classList.add('active');
+
+        state.screen = n;
+        updateProgress(n);
+
+        if (n >= 1 && n <= 5) {
+          trackEvent('quiz_q' + (n - 1 > 0 ? (n - 1) : '') + '_complete');
+        }
+      }, 220);
+    };
+
+    function updateProgress(n) {
+      var prog = document.getElementById('progress');
+      var label = document.getElementById('progressLabel');
+      var fill = document.getElementById('progressFill');
+
+      if (n >= 1 && n <= 5) {
+        prog.classList.add('visible');
+        label.textContent = 'Pergunta ' + n + ' de 5';
+        fill.style.width = (n * 20) + '%';
+      } else if (n === 6) {
+        prog.classList.add('visible');
+        label.textContent = 'Quase l\u00e1';
+        fill.style.width = '100%';
+      } else {
+        prog.classList.remove('visible');
+      }
+    }
+
+    // ── SINGLE SELECT ──
+    window.selectSingle = function(el) {
+      var parent = el.closest('[data-question]') || el.parentElement;
+      var siblings = parent.querySelectorAll('.opt-card, .vlist-item');
+      siblings.forEach(function(s) { s.classList.remove('selected'); });
+      el.classList.add('selected');
+
+      var question = parent.dataset.question;
+      var value = el.dataset.value;
+      state.answers[question] = value;
+
+      setTimeout(function() {
+        var screenNum = parseInt(el.closest('.screen').dataset.screen);
+        goToScreen(screenNum + 1);
+        if (screenNum >= 1 && screenNum <= 5) {
+          trackEvent('quiz_q' + screenNum + '_complete');
+        }
+      }, 400);
+    };
+
+    // ── MULTI SELECT (PILLS) ──
+    window.togglePill = function(el) {
+      el.classList.toggle('selected');
+      var parent = el.closest('[data-question]');
+      var selected = parent.querySelectorAll('.pill.selected');
+      var values = [];
+      selected.forEach(function(s) { values.push(s.dataset.value); });
+      state.answers.p3 = values;
+
+      var btn = document.getElementById('btnP3');
+      btn.disabled = values.length === 0;
+    };
+
+    // ── EMAIL VALIDATION ──
+    window.validateCapture = function() {
+      var name = document.getElementById('inputName').value.trim();
+      var email = document.getElementById('inputEmail').value.trim();
+      var valid = name.length >= 2 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      document.getElementById('btnSubmit').disabled = !valid;
+    };
+
+    // ── SUBMIT LEAD ──
+    window.submitLead = function() {
+      var btn = document.getElementById('btnSubmit');
+      if (btn.disabled) return;
+
+      state.name = document.getElementById('inputName').value.trim();
+      state.email = document.getElementById('inputEmail').value.trim();
+
+      btn.classList.add('btn--loading');
+      btn.disabled = true;
+
+      trackEvent('quiz_email_submitted');
+
+      var protocol = getProtocol();
+
+      if (RD_ENDPOINT) {
+        var payload = {
+          name: state.name,
+          email: state.email,
+          tags: protocol.tags,
+          custom_fields: {
+            protocolo_interesse: protocol.name,
+            estilo_vida: state.answers.p1 || '',
+            pico_desgaste: state.answers.p2 || '',
+            objetivo_saude: state.answers.p4 || '',
+            horario_preferido: state.answers.p5 || ''
+          }
+        };
+
+        var controller = new AbortController();
+        var timeout = setTimeout(function() { controller.abort(); }, 5000);
+
+        fetch(RD_ENDPOINT, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + RD_TOKEN
+          },
+          body: JSON.stringify(payload),
+          signal: controller.signal
+        })
+        .then(function(r) { clearTimeout(timeout); return r.json(); })
+        .then(function(data) { console.log('[RD Station] OK', data); })
+        .catch(function(err) {
+          console.error('[RD Station] Error', { erro: err.message, nome: state.name, email: state.email, protocolo: protocol.slug, timestamp: new Date().toISOString() });
+          setTimeout(function() {
+            fetch(RD_ENDPOINT, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + RD_TOKEN },
+              body: JSON.stringify(payload)
+            }).catch(function(e) { console.error('[RD Station] Retry failed', e.message); });
+          }, 10000);
+        });
+      } else {
+        console.log('[RD Station] Endpoint n\u00e3o configurado. Payload:', {
+          name: state.name, email: state.email, tags: protocol.tags,
+          custom_fields: { protocolo_interesse: protocol.name, estilo_vida: state.answers.p1, pico_desgaste: state.answers.p2, objetivo_saude: state.answers.p4, horario_preferido: state.answers.p5 }
+        });
+      }
+
+      setTimeout(function() {
+        btn.classList.remove('btn--loading');
+        showResult(protocol);
+      }, 800);
+    };
+
+    // ── ALGORITHM ──
+    function getProtocol() {
+      var p1 = state.answers.p1;
+      var p2 = state.answers.p2;
+      var p4 = state.answers.p4;
+
+      var key = 'saude';
+
+      if (p4 === 'A') key = 'beauty';
+      else if (p4 === 'B') key = 'saude';
+      else if (p4 === 'C') key = 'performance';
+      else if (p4 === 'D') key = 'longevidade';
+
+      if (p4 === 'D' && p1 === 'B' && p2 === 'D') key = 'performance';
+      if (p4 === 'B' && p1 === 'A' && p2 === 'B') key = 'saude';
+
+      return protocols[key];
+    }
+
+    // ── COPY COUPON ──
+    window.copyCoupon = function(code, el) {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(code).then(function() {
+          el.classList.add('copied');
+          el.textContent = 'Copiado!';
+          setTimeout(function() {
+            el.classList.remove('copied');
+            el.textContent = code;
+          }, 2000);
+        });
+      }
+    };
+
+    // ── SHOW RESULT ──
+    function showResult(protocol) {
+      var p5 = state.answers.p5 || 'default';
+      var moment = protocol.moments[p5] || protocol.moments.default;
+      var p1Label = p1Labels[state.answers.p1] || 'sua rotina';
+
+      var productsHTML = protocol.products.map(function(p, i) {
+        return '<div class="product-item">' +
+          '<div class="product-item__marker product-item__marker--' + (i + 1) + '"></div>' +
+          '<div>' +
+            '<div class="product-item__name">' + p.name + '</div>' +
+            '<div class="product-item__benefit">' + p.benefit + '</div>' +
+            '<span class="product-item__line">' + p.line + '</span>' +
+          '</div>' +
+        '</div>';
+      }).join('');
+
+      var html =
+        '<div class="result__badge">Seu protocolo ideal</div>' +
+        '<h2 class="result__title">' + protocol.name + '</h2>' +
+        '<p class="result__tagline">' + protocol.tagline + '</p>' +
+        '<p class="result__context">Baseado na sua rotina de ' + p1Label + '</p>' +
+
+        '<div class="moment-box">' +
+          '<span class="moment-box__icon">\ud83d\udd50</span>' +
+          '<div class="moment-box__text">' + moment + '</div>' +
+        '</div>' +
+
+        '<div class="products">' +
+          '<div class="products__title">Produtos do protocolo</div>' +
+          productsHTML +
+        '</div>' +
+
+        '<div class="coupon-box">' +
+          '<div class="coupon-box__label">Seu desconto exclusivo de primeira compra:</div>' +
+          '<div class="coupon-box__code" onclick="copyCoupon(\'' + protocol.coupon + '\', this)">' + protocol.coupon + '</div>' +
+          '<div class="coupon-box__copy-hint">Toque para copiar</div>' +
+          '<div class="coupon-box__validity">V\u00e1lido por 7 dias a partir de hoje</div>' +
+        '</div>' +
+
+        '<div class="result__cta">' +
+          '<a href="https://loja.stem.com.br" class="btn btn--primary btn--lg" onclick="trackEvent(\'quiz_cta_clicked\', {protocol_name: \'' + protocol.slug + '\'})" target="_blank">' +
+            '<span class="btn__text">Ver protocolo na loja \u2192</span>' +
+          '</a><br>' +
+          '<span class="result__restart" onclick="restartQuiz()">Refazer o diagn\u00f3stico</span>' +
+        '</div>';
+
+      document.getElementById('resultContent').innerHTML = html;
+      goToScreen(7);
+      trackEvent('quiz_result_viewed', { protocol_name: protocol.slug });
+    }
+
+    // ── RESTART ──
+    window.restartQuiz = function() {
+      state = { screen: 0, answers: {}, name: '', email: '' };
+      document.querySelectorAll('.opt-card, .vlist-item, .pill').forEach(function(el) {
+        el.classList.remove('selected');
+      });
+      document.getElementById('inputName').value = '';
+      document.getElementById('inputEmail').value = '';
+      document.getElementById('btnSubmit').disabled = true;
+      document.getElementById('btnP3').disabled = true;
+      goToScreen(0);
+    };
+
+    window.trackEvent = trackEvent;
+
+  })();
+  </script>
+
+</body>
+</html>
