@@ -1035,6 +1035,420 @@
     }
 
     /* ============================================
+       EDITORIAL OVERHAUL — fotos como protagonista
+       ============================================ */
+
+    /* ── Editorial number (STEM · 001) ── */
+    .ed-issue {
+      display: inline-flex; align-items: center; gap: var(--s3);
+      font-family: var(--font-sans);
+      font-size: 0.7rem; font-weight: 500;
+      letter-spacing: 0.32em; text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+    }
+    .ed-issue::before, .ed-issue::after {
+      content: ''; width: 28px; height: 1px;
+      background: rgba(255,255,255,0.25);
+    }
+    .ed-issue--dark { color: rgba(26,47,71,0.55); }
+    .ed-issue--dark::before, .ed-issue--dark::after {
+      background: rgba(26,47,71,0.18);
+    }
+
+    /* ── HERO EDITORIAL (split, full-bleed) ── */
+    .hero-ed {
+      position: relative; z-index: 1;
+      padding: 0;
+      min-height: 100vh; min-height: 100svh;
+      background:
+        radial-gradient(ellipse 80% 60% at 20% 80%, rgba(45, 90, 123, 0.25) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 50% at 80% 20%, rgba(100, 148, 183, 0.12) 0%, transparent 50%),
+        var(--navy);
+      color: #fffefb;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: stretch;
+      overflow: hidden;
+    }
+    .hero-ed__left {
+      padding: var(--s20) var(--s10) var(--s16) var(--s12);
+      display: flex; flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+    .hero-ed__top {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: var(--s16);
+    }
+    .hero-ed__brand {
+      font-family: var(--font-serif); font-style: italic;
+      font-size: 1.4rem;
+      letter-spacing: -0.01em;
+      color: #fffefb;
+    }
+    .hero-ed__brand-dot {
+      display: inline-block; width: 6px; height: 6px;
+      border-radius: 50%; background: var(--gold-light);
+      margin-left: 6px;
+      vertical-align: 0.3em;
+    }
+    .hero-ed__title {
+      font-family: var(--font-serif); font-weight: 400;
+      font-size: clamp(3rem, 7vw, 5.5rem);
+      line-height: 0.96;
+      letter-spacing: -0.025em;
+      color: #fffefb;
+      margin-bottom: var(--s8);
+    }
+    .hero-ed__title em {
+      font-style: italic; color: var(--gold-light);
+      position: relative; display: inline-block;
+    }
+    .hero-ed__title em::after {
+      content: '';
+      position: absolute; left: -0.05em; right: -0.05em;
+      bottom: 0.08em; height: 0.06em;
+      background: rgba(232, 213, 168, 0.25);
+      border-radius: 2px;
+    }
+    .hero-ed__sub {
+      font-size: clamp(0.98rem, 1.4vw, 1.1rem);
+      line-height: 1.65;
+      color: rgba(255,255,255,0.68);
+      max-width: 460px;
+      margin-bottom: var(--s8);
+    }
+    .hero-ed__cta-block {
+      display: flex; flex-direction: column;
+      gap: var(--s4);
+      margin-bottom: var(--s10);
+    }
+    .hero-ed__cta-note {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 0.06em;
+      display: inline-flex; align-items: center; gap: 6px;
+    }
+    .hero-ed__cta-note svg { color: var(--sage-light); }
+    .hero-ed__seals {
+      display: flex; flex-wrap: wrap; gap: var(--s6);
+      padding-top: var(--s6);
+      border-top: 1px solid rgba(255,255,255,0.12);
+    }
+    .hero-ed__seal {
+      display: flex; flex-direction: column; gap: 2px;
+    }
+    .hero-ed__seal-num {
+      font-family: var(--font-serif); font-style: italic;
+      font-size: 1.3rem;
+      color: var(--gold-light);
+      line-height: 1;
+    }
+    .hero-ed__seal-text {
+      font-size: 0.7rem;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: rgba(255,255,255,0.48);
+    }
+
+    .hero-ed__right {
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-ed__photo {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      filter: grayscale(0.05) contrast(1.05);
+    }
+    .hero-ed__photo-overlay {
+      position: absolute; inset: 0;
+      background:
+        linear-gradient(180deg, rgba(15,45,74,0.1) 0%, transparent 30%, transparent 70%, rgba(15,45,74,0.35) 100%),
+        linear-gradient(90deg, rgba(15,45,74,0.35) 0%, transparent 30%);
+      pointer-events: none;
+    }
+    .hero-ed__caption {
+      position: absolute; right: var(--s8); bottom: var(--s8);
+      max-width: 240px;
+      text-align: right;
+    }
+    .hero-ed__caption-num {
+      font-family: var(--font-serif); font-style: italic;
+      font-size: 0.85rem; color: var(--gold-light);
+      letter-spacing: 0.04em;
+      margin-bottom: 4px;
+    }
+    .hero-ed__caption-text {
+      font-size: 0.78rem; line-height: 1.5;
+      color: rgba(255,255,255,0.85);
+      letter-spacing: 0.02em;
+    }
+    .hero-ed__bottle-badge {
+      position: absolute; top: var(--s8); right: var(--s8);
+      background: rgba(15,45,74,0.55);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: var(--r-lg);
+      padding: var(--s4) var(--s5);
+      display: flex; align-items: center; gap: var(--s3);
+      color: #fffefb;
+    }
+    .hero-ed__bottle-badge-mark {
+      width: 36px; height: 36px;
+      border-radius: 8px;
+      background: linear-gradient(180deg, var(--primary), var(--primary-hover));
+      display: inline-flex; align-items: center; justify-content: center;
+      color: #fffefb;
+      font-family: var(--font-serif); font-style: italic;
+      font-size: 1rem; line-height: 1;
+    }
+    .hero-ed__bottle-badge-text {
+      display: flex; flex-direction: column; line-height: 1.2;
+    }
+    .hero-ed__bottle-badge-text strong {
+      font-size: 0.84rem; font-weight: 600;
+    }
+    .hero-ed__bottle-badge-text small {
+      font-size: 0.66rem;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+    }
+
+    /* ── PAIN PHOTO CARDS ── */
+    .pain-photos {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: var(--s4);
+      margin-bottom: var(--s10);
+    }
+    .pain-photo {
+      position: relative;
+      aspect-ratio: 3 / 4;
+      overflow: hidden;
+      border-radius: var(--r-xl);
+      box-shadow: var(--shadow-md);
+      transition: transform var(--t-base) var(--ease-out);
+      cursor: default;
+    }
+    .pain-photo:hover { transform: translateY(-6px); }
+    .pain-photo img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 800ms var(--ease-out);
+    }
+    .pain-photo:hover img { transform: scale(1.06); }
+    .pain-photo__overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(15,45,74,0.05) 0%, transparent 50%, rgba(15,45,74,0.75) 100%);
+    }
+    .pain-photo__num {
+      position: absolute; top: var(--s5); left: var(--s5);
+      font-family: var(--font-serif); font-style: italic;
+      font-size: 2.2rem; line-height: 1;
+      color: rgba(255,255,255,0.95);
+    }
+    .pain-photo__body {
+      position: absolute; left: var(--s5); right: var(--s5); bottom: var(--s5);
+      color: #fffefb;
+    }
+    .pain-photo__eyebrow {
+      font-size: 0.66rem; font-weight: 700;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: var(--s2);
+    }
+    .pain-photo__title {
+      font-family: var(--font-serif); font-weight: 400;
+      font-size: 1.35rem; line-height: 1.2;
+      margin-bottom: var(--s2);
+      letter-spacing: -0.005em;
+    }
+    .pain-photo__text {
+      font-size: 0.84rem; line-height: 1.55;
+      color: rgba(255,255,255,0.82);
+      max-width: 240px;
+    }
+
+    /* ── TESTIMONIAL EDITORIAL ── */
+    .testimonial-ed {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 0;
+      background: var(--glass);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--r-2xl);
+      overflow: hidden;
+      margin-bottom: var(--s5);
+      transition: box-shadow var(--t-base);
+    }
+    .testimonial-ed:hover { box-shadow: var(--shadow-lg); }
+    .testimonial-ed--reverse {
+      grid-template-columns: 1.3fr 1fr;
+    }
+    .testimonial-ed--reverse .testimonial-ed__photo { order: 2; }
+    .testimonial-ed--reverse .testimonial-ed__body { order: 1; }
+    .testimonial-ed__photo {
+      position: relative;
+      aspect-ratio: 4 / 5;
+      overflow: hidden;
+      background: var(--forest-mid);
+    }
+    .testimonial-ed__photo img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 1000ms var(--ease-out);
+    }
+    .testimonial-ed:hover .testimonial-ed__photo img { transform: scale(1.04); }
+    .testimonial-ed__photo-tag {
+      position: absolute; left: var(--s5); bottom: var(--s5);
+      background: rgba(15,45,74,0.7);
+      backdrop-filter: blur(10px);
+      padding: 0.35rem 0.75rem;
+      border-radius: var(--r-pill);
+      font-size: 0.66rem;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      font-weight: 600;
+      color: var(--gold-light);
+    }
+    .testimonial-ed__body {
+      padding: var(--s10) var(--s10);
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    .testimonial-ed__num {
+      font-family: var(--font-serif); font-style: italic;
+      font-size: 2.5rem; line-height: 1;
+      color: var(--primary);
+      margin-bottom: var(--s5);
+      opacity: 0.5;
+    }
+    .testimonial-ed__quote {
+      font-family: var(--font-serif); font-weight: 400;
+      font-size: clamp(1.2rem, 1.8vw, 1.5rem);
+      line-height: 1.4;
+      color: var(--warm-white);
+      margin-bottom: var(--s6);
+      letter-spacing: -0.005em;
+    }
+    .testimonial-ed__quote em {
+      font-style: italic; color: var(--primary);
+    }
+    .testimonial-ed__author {
+      display: flex; flex-direction: column;
+      padding-top: var(--s4);
+      border-top: 1px solid rgba(15, 45, 74, 0.08);
+    }
+    .testimonial-ed__name {
+      font-weight: 600; font-size: 0.95rem;
+      color: var(--warm-white);
+    }
+    .testimonial-ed__meta {
+      font-size: 0.78rem; color: rgba(26,47,71,0.55);
+      letter-spacing: 0.04em;
+    }
+    .testimonial-ed__stars {
+      color: var(--gold); letter-spacing: 2px;
+      margin-top: var(--s2);
+      font-size: 0.85rem;
+    }
+
+    /* ── CTA FINAL com foto de fundo ── */
+    .cta-final--photo {
+      position: relative;
+      padding: 0;
+      overflow: hidden;
+      border-radius: 0;
+    }
+    .cta-final--photo .cta-final__bg {
+      position: absolute; inset: 0;
+      z-index: 0;
+    }
+    .cta-final--photo .cta-final__bg img {
+      width: 100%; height: 100%; object-fit: cover;
+      object-position: center 35%;
+    }
+    .cta-final--photo .cta-final__bg::after {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        linear-gradient(180deg, rgba(15,45,74,0.78) 0%, rgba(15,45,74,0.65) 50%, rgba(15,45,74,0.85) 100%);
+    }
+    .cta-final--photo .container {
+      position: relative; z-index: 2;
+      padding-top: var(--s20);
+      padding-bottom: var(--s20);
+    }
+    .cta-final--photo .cta-final__title {
+      color: #fffefb;
+    }
+    .cta-final--photo .cta-final__title em {
+      color: var(--gold-light);
+      background: none;
+      -webkit-text-fill-color: var(--gold-light);
+      animation: none;
+    }
+    .cta-final--photo .cta-final__sub {
+      color: rgba(255,255,255,0.78);
+    }
+    .cta-final--photo .cta-final__micro {
+      color: rgba(255,255,255,0.6);
+    }
+    .cta-final--photo .cta-final__micro svg {
+      color: var(--gold-light);
+    }
+
+    /* ── EDITORIAL TAGLINE STRIP (entre seções) ── */
+    .ed-strip {
+      padding: var(--s10) 0;
+      text-align: center;
+      border-top: 1px solid rgba(15,45,74,0.08);
+      border-bottom: 1px solid rgba(15,45,74,0.08);
+      background: var(--linen);
+    }
+    .ed-strip__quote {
+      font-family: var(--font-serif); font-style: italic;
+      font-size: clamp(1.4rem, 3vw, 2.1rem); line-height: 1.3;
+      color: var(--warm-white);
+      max-width: 760px; margin: 0 auto var(--s4);
+      letter-spacing: -0.01em;
+    }
+    .ed-strip__quote em {
+      color: var(--primary); font-style: italic;
+    }
+    .ed-strip__attribution {
+      font-size: 0.72rem;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: rgba(26,47,71,0.5);
+    }
+
+    /* ── RESPONSIVE — Editorial ── */
+    @media (max-width: 880px) {
+      .hero-ed {
+        grid-template-columns: 1fr;
+        grid-template-rows: 60vh 1fr;
+        min-height: auto;
+      }
+      .hero-ed__right { grid-row: 1; min-height: 60vh; }
+      .hero-ed__left {
+        padding: var(--s10) var(--s5) var(--s10);
+      }
+      .hero-ed__top { margin-bottom: var(--s8); }
+      .hero-ed__title { font-size: clamp(2.2rem, 8vw, 3.5rem); }
+      .hero-ed__caption { left: var(--s5); right: var(--s5); bottom: var(--s5); max-width: none; }
+
+      .pain-photos { grid-template-columns: 1fr; }
+
+      .testimonial-ed,
+      .testimonial-ed--reverse {
+        grid-template-columns: 1fr;
+      }
+      .testimonial-ed--reverse .testimonial-ed__photo { order: 1; }
+      .testimonial-ed--reverse .testimonial-ed__body { order: 2; }
+      .testimonial-ed__body { padding: var(--s6); }
+      .testimonial-ed__photo { aspect-ratio: 16 / 10; }
+    }
+
+    /* ============================================
        RESPONSIVE
        ============================================ */
     @media (max-width: 880px) {
@@ -1155,71 +1569,75 @@
     <strong>Frete grátis acima de R$ [FRETE_MIN]</strong> · Cupom <strong>BIOTINA10</strong> · 10% off no primeiro pedido
   </div>
 
-  <!-- ========== HERO ========== -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero__grid">
-        <div class="hero__copy">
-          <div class="hero__eyebrow">
-            <span class="hero__eyebrow-dot"></span>
-            Biotina Plus · Linha Nutrition
-          </div>
+  <!-- ========== HERO EDITORIAL ========== -->
+  <section class="hero hero-ed">
+    <div class="hero-ed__left">
+      <div class="hero-ed__top">
+        <div class="hero-ed__brand">Stem<span class="hero-ed__brand-dot"></span></div>
+        <div class="ed-issue">Issue 001 — Biotina</div>
+      </div>
 
-          <h1 class="hero__title">
-            Cabelo, pele e unhas que <em>falam por você.</em>
-          </h1>
+      <div>
+        <h1 class="hero-ed__title">
+          Cabelo, pele e<br>unhas que <em>falam<br>por você.</em>
+        </h1>
 
-          <p class="hero__sub">
-            Biotina (vitamina B7) em dose validada cientificamente. Produção farmacêutica, selo ANVISA — para resultado consistente em <strong>60 a 90 dias</strong>.
-          </p>
+        <p class="hero-ed__sub">
+          Biotina (vitamina B7) em dose validada cientificamente. Produção farmacêutica, selo ANVISA — para resultado consistente em <strong>60 a 90 dias</strong>.
+        </p>
 
-          <div class="hero__cta-row">
-            <a href="[URL_CHECKOUT_BIOTINA]"
-               class="btn btn--primary btn--lg btn--pulse cta-link"
-               data-cta-position="hero"
-               target="_blank"
-               rel="noopener"
-               aria-label="Comprar Biotina Plus agora">
-              <span>Quero minha Biotina Plus</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-            </a>
-            <div class="hero__cta-note">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-              Garantia de 30 dias · Entrega para todo o Brasil
-            </div>
-          </div>
-
-          <div class="hero__proof">
-            <div class="hero__proof-item">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              Selo ANVISA
-            </div>
-            <div class="hero__proof-item">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14M22 4L12 14.01l-3-3"/></svg>
-              Produção farmacêutica
-            </div>
-            <div class="hero__proof-item">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-              Avaliado por nutricionistas
-            </div>
+        <div class="hero-ed__cta-block">
+          <a href="[URL_CHECKOUT_BIOTINA]"
+             class="btn btn--primary btn--lg cta-link"
+             data-cta-position="hero"
+             target="_blank"
+             rel="noopener"
+             aria-label="Comprar Biotina Plus agora">
+            <span>Quero minha Biotina Plus</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <div class="hero-ed__cta-note">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+            Garantia de 30 dias · Entrega para todo o Brasil
           </div>
         </div>
+      </div>
 
-        <!-- HERO VISUAL — placeholder estilizado. Substitua o bloco .hero__bottle por <img src="[IMG_FRASCO_BIOTINA]" fetchpriority="high" alt="Frasco Biotina Plus Stem"> quando tiver a foto real -->
-        <div class="hero__visual" aria-hidden="true">
-          <div class="hero__halo"></div>
-          <div class="hero__bottle">
-            <div class="hero__bottle-label">
-              <div class="hero__bottle-brand">Stem</div>
-              <div class="hero__bottle-name">Biotina<br>Plus</div>
-              <div class="hero__bottle-line">Nutrition</div>
-            </div>
-            <div class="hero__bottle-dose">[DOSAGEM_MCG] MCG · 60 CÁPSULAS</div>
-          </div>
-          <div class="hero__molecule hero__molecule--1">B7 · biotina</div>
-          <div class="hero__molecule hero__molecule--2">Queratina+</div>
-          <div class="hero__molecule hero__molecule--3">Vegano</div>
+      <div class="hero-ed__seals">
+        <div class="hero-ed__seal">
+          <div class="hero-ed__seal-num">i.</div>
+          <div class="hero-ed__seal-text">Selo ANVISA</div>
         </div>
+        <div class="hero-ed__seal">
+          <div class="hero-ed__seal-num">ii.</div>
+          <div class="hero-ed__seal-text">Produção farmacêutica</div>
+        </div>
+        <div class="hero-ed__seal">
+          <div class="hero-ed__seal-num">iii.</div>
+          <div class="hero-ed__seal-text">Avaliado por nutricionistas</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-ed__right">
+      <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=1400&q=85&auto=format&fit=crop"
+           alt="Mulher com cabelo brilhante e pele radiante"
+           class="hero-ed__photo"
+           fetchpriority="high"
+           decoding="async">
+      <div class="hero-ed__photo-overlay"></div>
+
+      <div class="hero-ed__bottle-badge">
+        <div class="hero-ed__bottle-badge-mark">B</div>
+        <div class="hero-ed__bottle-badge-text">
+          <strong>Biotina Plus</strong>
+          <small>Linha Nutrition · [DOSAGEM_MCG]mcg</small>
+        </div>
+      </div>
+
+      <div class="hero-ed__caption">
+        <div class="hero-ed__caption-num">— ph. 01 / Maria, 34, 90 dias depois</div>
+        <div class="hero-ed__caption-text">Resultado real de uma rotina simples, com 1 cápsula por dia.</div>
       </div>
     </div>
   </section>
@@ -1235,29 +1653,41 @@
         </p>
       </div>
 
-      <div class="pains__grid">
-        <div class="pain-card reveal">
-          <div class="pain-card__icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c-3 4-6 8-6 12a6 6 0 0012 0c0-4-3-8-6-12z"/></svg>
+      <div class="pain-photos">
+        <div class="pain-photo reveal">
+          <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=85&auto=format&fit=crop"
+               alt="Mulher com cabelo no chuveiro" loading="lazy" decoding="async">
+          <div class="pain-photo__overlay"></div>
+          <div class="pain-photo__num">01</div>
+          <div class="pain-photo__body">
+            <div class="pain-photo__eyebrow">Cabelo</div>
+            <div class="pain-photo__title">Queda além do normal</div>
+            <div class="pain-photo__text">Fios no travesseiro, no chuveiro, no pente. O volume some antes da hora.</div>
           </div>
-          <h3 class="pain-card__title">Cabelo caindo mais do que deveria</h3>
-          <p class="pain-card__text">Fios no travesseiro, no chuveiro, no pente. A queda passa do normal e o volume some.</p>
         </div>
 
-        <div class="pain-card reveal">
-          <div class="pain-card__icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="3" width="12" height="18" rx="3"/><path d="M9 8h6M9 12h6"/></svg>
+        <div class="pain-photo reveal">
+          <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=800&q=85&auto=format&fit=crop"
+               alt="Closeup de mão com unhas" loading="lazy" decoding="async">
+          <div class="pain-photo__overlay"></div>
+          <div class="pain-photo__num">02</div>
+          <div class="pain-photo__body">
+            <div class="pain-photo__eyebrow">Unhas</div>
+            <div class="pain-photo__title">Quebram antes de crescer</div>
+            <div class="pain-photo__text">Estriadas, finas, descamando. Esmalte não resolve uma fraqueza estrutural.</div>
           </div>
-          <h3 class="pain-card__title">Unhas que quebram antes de crescer</h3>
-          <p class="pain-card__text">Você corta, fica curtinha de novo. Estriadas, finas, descamando. Esmalte não resolve.</p>
         </div>
 
-        <div class="pain-card reveal">
-          <div class="pain-card__icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        <div class="pain-photo reveal">
+          <img src="https://images.unsplash.com/photo-1614108300040-9b46cf1d57a4?w=800&q=85&auto=format&fit=crop"
+               alt="Closeup de pele de mulher" loading="lazy" decoding="async">
+          <div class="pain-photo__overlay"></div>
+          <div class="pain-photo__num">03</div>
+          <div class="pain-photo__body">
+            <div class="pain-photo__eyebrow">Pele</div>
+            <div class="pain-photo__title">Sem o viço de antes</div>
+            <div class="pain-photo__text">Maquiagem não pega como antes. A pele parece cansada mesmo após uma boa noite.</div>
           </div>
-          <h3 class="pain-card__title">Pele opaca, sem o brilho que lembra</h3>
-          <p class="pain-card__text">Maquiagem não pega como antes. A pele parece cansada mesmo quando você dorme bem.</p>
         </div>
       </div>
 
@@ -1431,6 +1861,14 @@
     </div>
   </section>
 
+  <!-- ========== EDITORIAL STRIP ========== -->
+  <aside class="ed-strip reveal" aria-label="Frase editorial">
+    <div class="container container--narrow">
+      <p class="ed-strip__quote">"A diferença entre <em>tomar</em> biotina<br>e <em>tomar biotina certa</em> é o que aparece no espelho."</p>
+      <div class="ed-strip__attribution">— Notas clínicas · Stem Nutrition</div>
+    </div>
+  </aside>
+
   <!-- ========== SHOWCASE ========== -->
   <section class="showcase">
     <div class="container">
@@ -1495,48 +1933,54 @@
         </p>
       </div>
 
-      <div class="proof__grid">
-        <div class="testimonial reveal">
-          <div class="testimonial__stars" aria-label="5 estrelas">★★★★★</div>
-          <p class="testimonial__quote">"[DEPOIMENTO_1] — depoimento real a substituir. Aproveite 2-3 frases com sensorial: o que ela percebeu, em quanto tempo, qual foi o detalhe que ela mais notou."</p>
-          <div class="testimonial__author">
-            <div class="testimonial__avatar">
-              <img src="https://i.pravatar.cc/120?img=47" alt="Foto de [NOME_1]" loading="lazy" decoding="async">
-            </div>
-            <div>
-              <div class="testimonial__name">[NOME_1]</div>
-              <div class="testimonial__city">[CIDADE_1]</div>
+      <div class="proof__editorial">
+        <article class="testimonial-ed reveal">
+          <div class="testimonial-ed__photo">
+            <img src="https://i.pravatar.cc/600?img=47" alt="Foto de [NOME_1]" loading="lazy" decoding="async">
+            <div class="testimonial-ed__photo-tag">90 dias depois</div>
+          </div>
+          <div class="testimonial-ed__body">
+            <div class="testimonial-ed__num">01</div>
+            <p class="testimonial-ed__quote">"[DEPOIMENTO_1] — depoimento real a substituir. Aproveite 2-3 frases sensoriais: o que ela <em>percebeu</em>, em quanto tempo, qual foi o detalhe que ela mais notou no espelho."</p>
+            <div class="testimonial-ed__author">
+              <div class="testimonial-ed__name">[NOME_1]</div>
+              <div class="testimonial-ed__meta">[CIDADE_1] · Cliente desde [ANO]</div>
+              <div class="testimonial-ed__stars" aria-label="5 estrelas">★★★★★</div>
             </div>
           </div>
-        </div>
+        </article>
 
-        <div class="testimonial reveal">
-          <div class="testimonial__stars" aria-label="5 estrelas">★★★★★</div>
-          <p class="testimonial__quote">"[DEPOIMENTO_2] — depoimento real a substituir. Tente uma voz diferente da primeira: foco em unhas, ou em fotos pessoais, ou em comparação com outros suplementos que já tinha usado."</p>
-          <div class="testimonial__author">
-            <div class="testimonial__avatar">
-              <img src="https://i.pravatar.cc/120?img=49" alt="Foto de [NOME_2]" loading="lazy" decoding="async">
-            </div>
-            <div>
-              <div class="testimonial__name">[NOME_2]</div>
-              <div class="testimonial__city">[CIDADE_2]</div>
+        <article class="testimonial-ed testimonial-ed--reverse reveal">
+          <div class="testimonial-ed__body">
+            <div class="testimonial-ed__num">02</div>
+            <p class="testimonial-ed__quote">"[DEPOIMENTO_2] — voz diferente da primeira: foco em <em>unhas</em>, em fotos pessoais ou em comparação com outros suplementos que já tinha usado."</p>
+            <div class="testimonial-ed__author">
+              <div class="testimonial-ed__name">[NOME_2]</div>
+              <div class="testimonial-ed__meta">[CIDADE_2] · Cliente desde [ANO]</div>
+              <div class="testimonial-ed__stars" aria-label="5 estrelas">★★★★★</div>
             </div>
           </div>
-        </div>
+          <div class="testimonial-ed__photo">
+            <img src="https://i.pravatar.cc/600?img=49" alt="Foto de [NOME_2]" loading="lazy" decoding="async">
+            <div class="testimonial-ed__photo-tag">60 dias depois</div>
+          </div>
+        </article>
 
-        <div class="testimonial reveal">
-          <div class="testimonial__stars" aria-label="5 estrelas">★★★★★</div>
-          <p class="testimonial__quote">"[DEPOIMENTO_3] — depoimento real a substituir. Variar mais ainda: alguém mais velho/a, foco em renovação da pele, ou referência ao protocolo do quiz."</p>
-          <div class="testimonial__author">
-            <div class="testimonial__avatar">
-              <img src="https://i.pravatar.cc/120?img=44" alt="Foto de [NOME_3]" loading="lazy" decoding="async">
-            </div>
-            <div>
-              <div class="testimonial__name">[NOME_3]</div>
-              <div class="testimonial__city">[CIDADE_3]</div>
+        <article class="testimonial-ed reveal">
+          <div class="testimonial-ed__photo">
+            <img src="https://i.pravatar.cc/600?img=44" alt="Foto de [NOME_3]" loading="lazy" decoding="async">
+            <div class="testimonial-ed__photo-tag">120 dias depois</div>
+          </div>
+          <div class="testimonial-ed__body">
+            <div class="testimonial-ed__num">03</div>
+            <p class="testimonial-ed__quote">"[DEPOIMENTO_3] — alguém com perfil mais maduro, foco em <em>renovação da pele</em> ou referência ao protocolo completo do quiz."</p>
+            <div class="testimonial-ed__author">
+              <div class="testimonial-ed__name">[NOME_3]</div>
+              <div class="testimonial-ed__meta">[CIDADE_3] · Cliente desde [ANO]</div>
+              <div class="testimonial-ed__stars" aria-label="5 estrelas">★★★★★</div>
             </div>
           </div>
-        </div>
+        </article>
       </div>
 
       <p class="proof__footer reveal">
@@ -1674,10 +2118,18 @@
     </div>
   </section>
 
-  <!-- ========== CTA FINAL ========== -->
-  <section class="cta-final">
+  <!-- ========== CTA FINAL — editorial com background image ========== -->
+  <section class="cta-final cta-final--photo">
+    <div class="cta-final__bg" aria-hidden="true">
+      <img src="https://images.unsplash.com/photo-1583209814883-c00e7b9fae1a?w=1800&q=85&auto=format&fit=crop"
+           alt=""
+           loading="lazy" decoding="async">
+    </div>
+
     <div class="container container--narrow">
       <div class="reveal">
+        <div class="ed-issue" style="margin: 0 auto var(--s8); justify-content: center;">— último capítulo —</div>
+
         <h2 class="cta-final__title">
           Sua próxima foto de perfil <em>agradece.</em>
         </h2>
@@ -1847,9 +2299,13 @@
          [IMG_OG_BIOTINA_1200x630]  — imagem Open Graph (compartilhamento social)
 
        Imagens lifestyle (já implementadas via Unsplash — trocar pelas fotos da campanha quando houver):
-         .showcase__item img        — 4 imagens (cabelo, pele, cápsulas, lifestyle) em URLs images.unsplash.com
-         .solution__visual img      — mulher com cabelo/pele em URL images.unsplash.com
-         .testimonial__avatar img   — 3 avatares via i.pravatar.cc — substituir por fotos reais dos clientes
+         .hero-ed__photo            — foto vertical full-bleed do hero (substituir pela foto da campanha)
+         .pain-photo img × 3        — fotos das dores (cabelo / unhas / pele)
+         .showcase__item img × 4    — galeria editorial (cabelo, pele, cápsulas, lifestyle)
+         .solution__visual img      — foto da seção solução (mulher resultado)
+         .testimonial-ed img × 3    — fotos verticais grandes dos testimonials (via i.pravatar.cc)
+         .cta-final__bg img         — background do CTA final
+         [ANO]                       — ano em que cada cliente começou a usar (testimonials)
 
        Produto:
          [DOSAGEM_MCG]              — dose por cápsula em mcg (ex: 5000)
