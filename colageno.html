@@ -1,0 +1,1486 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colágeno Stem com VERISOL® — Firmeza, cabelo, unhas e articulações</title>
+  <meta name="description" content="Colágeno hidrolisado com tecnologia clínica VERISOL®. Apoia pele firme, cabelo, unhas e articulações em um único protocolo diário. Registro ANVISA.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://loja.stem.com.br/colageno">
+  <meta property="og:title" content="Colágeno Stem com VERISOL® — Firmeza por dentro. Confiança por fora.">
+  <meta property="og:description" content="Pele firme, cabelo, unhas e articulações em um único protocolo diário.">
+  <meta property="og:url" content="https://loja.stem.com.br/colageno">
+  <meta property="og:type" content="product">
+
+  <!--
+    ─────────────────────────────────────────────────────────────────
+    TODOs ANTES DE PUBLICAR — preencher onde estiver marcado <!- - TODO ... ->
+    1. URL do checkout — buscar por `href="#oferta"` que estão dentro da .offer-box e da seção CTA final (use #checkout). Substituir pelo link real.
+    2. Preço, parcelas e garantia na .offer-box
+    3. Depoimentos reais (3 cards na seção Depoimentos)
+    4. Packshot do produto (hero e seção produto)
+    5. Pixel ID (Meta) e GTM ID
+    6. Sabor do produto (ficha técnica)
+    7. Links de política / termos / contato (footer)
+    ─────────────────────────────────────────────────────────────────
+  -->
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    // TODO: Substituir pelo Pixel ID real
+    // fbq('init', 'SEU_PIXEL_ID_AQUI');
+    // fbq('track', 'PageView');
+  </script>
+
+  <!-- Google Tag -->
+  <!-- TODO: Substituir pelo ID real do Google Tag -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=SEU_ID_AQUI"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'SEU_ID_AQUI');
+  </script>
+  -->
+
+  <style>
+    /* ============================================
+       STEM Colágeno LP — Design System (clone de index.html)
+       ============================================ */
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --primary: #4a9e7e;
+      --primary-hover: #3d8a6d;
+      --primary-glow: rgba(74, 158, 126, 0.20);
+      --primary-light: rgba(74, 158, 126, 0.08);
+      --primary-soft: rgba(74, 158, 126, 0.04);
+
+      --forest: #f4f7f2;
+      --forest-mid: #eaf0e6;
+      --sage: #7a9b8a;
+      --sage-light: #5a8572;
+
+      --sand: #f6f1eb;
+      --warm-white: #2d3e36;
+      --cream: #fafcf8;
+
+      --gold: #e8a358;
+      --gold-dark: #d1903e;
+      --gold-glow: rgba(232, 163, 88, 0.12);
+
+      --ink: #1a1c20;
+      --ink-secondary: #454a52;
+      --ink-muted: #747a84;
+
+      --glass: rgba(255, 255, 255, 0.65);
+      --glass-hover: rgba(255, 255, 255, 0.85);
+      --glass-active: rgba(74, 158, 126, 0.08);
+      --glass-border: rgba(0, 0, 0, 0.06);
+      --glass-border-hover: rgba(0, 0, 0, 0.12);
+
+      --font-serif: 'Instrument Serif', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+      --s1: 0.25rem; --s2: 0.5rem; --s3: 0.75rem; --s4: 1rem;
+      --s5: 1.25rem; --s6: 1.5rem; --s8: 2rem; --s10: 2.5rem;
+      --s12: 3rem; --s16: 4rem; --s20: 5rem;
+
+      --r-sm: 8px; --r-md: 12px; --r-lg: 16px; --r-xl: 20px; --r-2xl: 28px; --r-pill: 200px;
+
+      --shadow-subtle: 0 1px 2px rgba(0,0,0,0.06);
+      --shadow-sm: 0 2px 8px rgba(74, 100, 86, 0.08);
+      --shadow-md: 0 8px 32px rgba(74, 100, 86, 0.12);
+      --shadow-lg: 0 16px 48px rgba(74, 100, 86, 0.16);
+      --shadow-glow: 0 0 40px var(--primary-glow);
+
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+      --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+      --t-fast: 150ms; --t-base: 280ms; --t-slow: 450ms;
+    }
+
+    html {
+      font-size: 100%;
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.65;
+      color: var(--ink);
+      background: var(--forest);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+      min-height: 100vh;
+      min-height: 100svh;
+    }
+
+    ::selection { background: var(--primary); color: #fff; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ── Grain ── */
+    .grain {
+      position: fixed; inset: 0; z-index: 9999; pointer-events: none; opacity: 0.015;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      background-repeat: repeat; background-size: 256px 256px;
+    }
+
+    /* ── Background orbs ── */
+    .lp-bg {
+      position: fixed; inset: 0; pointer-events: none; overflow: hidden; z-index: 0;
+    }
+    .lp-bg__orb { position: absolute; border-radius: 50%; filter: blur(100px); }
+    .lp-bg__orb--1 {
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(74,158,126,0.15) 0%, transparent 70%);
+      top: -200px; right: -200px;
+      animation: float-orb 14s ease-in-out infinite;
+    }
+    .lp-bg__orb--2 {
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(232,163,88,0.10) 0%, transparent 70%);
+      bottom: -120px; left: -120px;
+      animation: float-orb 18s ease-in-out infinite reverse;
+    }
+    .lp-bg__orb--3 {
+      width: 300px; height: 300px;
+      background: radial-gradient(circle, rgba(74,158,126,0.08) 0%, transparent 70%);
+      top: 50%; left: 50%; transform: translate(-50%, -50%);
+      animation: float-orb 20s ease-in-out infinite 3s;
+    }
+    @keyframes float-orb {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      33% { transform: translate(25px, -35px) scale(1.06); }
+      66% { transform: translate(-18px, 18px) scale(0.96); }
+    }
+    .lp-bg::after {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(74,158,126,0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(74,158,126,0.035) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, black 20%, transparent 70%);
+    }
+
+    /* ── Animations ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes shimmer {
+      0%, 100% { background-position: 0% center; }
+      50% { background-position: 200% center; }
+    }
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; box-shadow: 0 0 8px var(--primary-glow); }
+      50% { opacity: 0.4; box-shadow: 0 0 2px var(--primary-glow); }
+    }
+    @keyframes btn-pulse {
+      0%, 100% { box-shadow: 0 2px 16px var(--primary-glow), 0 0 0 0 rgba(74,158,126,0.2); }
+      50% { box-shadow: 0 4px 28px var(--primary-glow), 0 0 0 12px rgba(74,158,126,0); }
+    }
+    @keyframes slideUpSticky {
+      from { transform: translateY(100%); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    /* ── Layout ── */
+    .lp {
+      position: relative; z-index: 1;
+      max-width: 1100px; margin: 0 auto;
+      padding: 0 var(--s6);
+    }
+
+    /* ── Top bar ── */
+    .topbar {
+      position: relative; z-index: 2;
+      padding: var(--s6) var(--s6) 0;
+      max-width: 1100px; margin: 0 auto;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .topbar__cta {
+      font-size: 0.8rem; font-weight: 600;
+      color: var(--primary);
+      padding: 0.5rem 1rem;
+      border: 1px solid rgba(74,158,126,0.25);
+      border-radius: var(--r-pill);
+      transition: all var(--t-base) var(--ease-out);
+    }
+    .topbar__cta:hover {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+    @media (max-width: 480px) {
+      .topbar__cta { display: none; }
+    }
+
+    /* ── Brand logo ── */
+    .brand-logo {
+      display: flex; align-items: center; gap: 10px;
+    }
+    .brand-logo__mark {
+      width: 36px; height: 36px; border-radius: 10px;
+      background: linear-gradient(135deg, var(--primary) 0%, #6ec4a0 100%);
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 2px 12px var(--primary-glow);
+      position: relative; overflow: hidden;
+    }
+    .brand-logo__mark::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, transparent 40%, rgba(255,255,255,0.15) 100%);
+    }
+    .brand-logo__mark svg { position: relative; z-index: 1; }
+    .brand-logo__text {
+      font-family: var(--font-sans); font-weight: 700; font-size: 1.3rem;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--warm-white);
+    }
+
+    /* ── Section base ── */
+    .section {
+      padding: var(--s16) 0;
+      animation: fadeUp 600ms var(--ease-out) both;
+    }
+    .section--tight { padding: var(--s12) 0; }
+    .section__eyebrow {
+      display: inline-flex; align-items: center; gap: var(--s2);
+      font-size: 0.68rem; font-weight: 700; letter-spacing: 0.16em;
+      text-transform: uppercase; color: var(--primary);
+      margin-bottom: var(--s3);
+    }
+    .section__eyebrow::before {
+      content: ''; width: 24px; height: 1px;
+      background: var(--primary); opacity: 0.5;
+    }
+    .section__title {
+      font-family: var(--font-serif); font-weight: 400;
+      font-size: clamp(1.7rem, 4vw, 2.6rem); line-height: 1.12;
+      color: var(--warm-white); margin-bottom: var(--s5);
+      letter-spacing: -0.01em; max-width: 720px;
+    }
+    .section__title em {
+      font-style: italic;
+      background: linear-gradient(135deg, #3d8a6d 0%, #6ec4a0 50%, #3d8a6d 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shimmer 4s ease-in-out infinite;
+    }
+    .section__sub {
+      font-size: clamp(0.95rem, 2vw, 1.08rem);
+      color: rgba(44,62,54,0.65); line-height: 1.7;
+      max-width: 640px; margin-bottom: var(--s8);
+    }
+    .section--center { text-align: center; }
+    .section--center .section__title,
+    .section--center .section__sub { margin-left: auto; margin-right: auto; }
+
+    /* ── Hero ── */
+    .hero {
+      padding: var(--s10) 0 var(--s16);
+      display: grid; grid-template-columns: 1.1fr 0.9fr;
+      gap: var(--s12); align-items: center;
+    }
+    .hero__badge {
+      display: inline-flex; align-items: center; gap: var(--s2);
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--sage-light);
+      margin-bottom: var(--s5);
+      background: rgba(0,0,0,0.03);
+      border: 1px solid rgba(0,0,0,0.05);
+      border-radius: var(--r-pill);
+      padding: 0.4rem 1rem;
+    }
+    .hero__badge-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--primary);
+      box-shadow: 0 0 8px var(--primary-glow);
+      animation: pulse-dot 2s ease-in-out infinite;
+    }
+    .hero__title {
+      font-family: var(--font-serif); font-weight: 400;
+      font-size: clamp(2.2rem, 5.5vw, 3.6rem); line-height: 1.05;
+      color: var(--warm-white); margin-bottom: var(--s5);
+      letter-spacing: -0.015em;
+    }
+    .hero__title em {
+      font-style: italic;
+      background: linear-gradient(135deg, #3d8a6d 0%, #6ec4a0 50%, #3d8a6d 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shimmer 4s ease-in-out infinite;
+    }
+    .hero__sub {
+      font-size: clamp(1rem, 2vw, 1.15rem);
+      color: rgba(44,62,54,0.7); line-height: 1.6;
+      margin-bottom: var(--s8); max-width: 540px;
+    }
+    .hero__sub strong {
+      color: var(--warm-white); font-weight: 600;
+    }
+    .hero__actions {
+      display: flex; flex-wrap: wrap; gap: var(--s4); align-items: center;
+      margin-bottom: var(--s8);
+    }
+    .hero__proof {
+      display: flex; flex-wrap: wrap; gap: var(--s5) var(--s6);
+    }
+    .hero__proof-item {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 0.78rem; color: rgba(44,62,54,0.55);
+      font-weight: 500;
+    }
+    .hero__proof-item svg { color: var(--primary); opacity: 0.8; flex-shrink: 0; }
+
+    .hero__visual {
+      position: relative;
+      min-height: 460px;
+      border-radius: var(--r-2xl);
+      background:
+        radial-gradient(circle at 30% 30%, rgba(74,158,126,0.18), transparent 60%),
+        radial-gradient(circle at 70% 70%, rgba(232,163,88,0.12), transparent 60%),
+        linear-gradient(135deg, rgba(255,255,255,0.7), rgba(255,255,255,0.4));
+      border: 1px solid rgba(74,158,126,0.12);
+      box-shadow: var(--shadow-md);
+      backdrop-filter: blur(8px);
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden;
+    }
+    .hero__visual::before {
+      content: '';
+      position: absolute; inset: 12%;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(74,158,126,0.18) 0%, transparent 70%);
+      animation: float-orb 12s ease-in-out infinite;
+    }
+    .hero__visual-placeholder {
+      position: relative; z-index: 1;
+      text-align: center;
+      padding: var(--s8);
+    }
+    .hero__visual-emoji {
+      font-size: 5rem;
+      filter: drop-shadow(0 8px 24px rgba(74,158,126,0.25));
+      margin-bottom: var(--s4);
+    }
+    .hero__visual-label {
+      font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: rgba(74,158,126,0.55);
+    }
+    .hero__visual-tag {
+      position: absolute;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(74,158,126,0.15);
+      border-radius: var(--r-pill);
+      padding: 0.5rem 1rem;
+      font-size: 0.78rem; font-weight: 600;
+      color: var(--warm-white);
+      box-shadow: var(--shadow-sm);
+      display: inline-flex; align-items: center; gap: 6px;
+    }
+    .hero__visual-tag svg { color: var(--primary); }
+    .hero__visual-tag--1 { top: 15%; left: -8%; animation: fadeUp 700ms var(--ease-out) 400ms both; }
+    .hero__visual-tag--2 { top: 45%; right: -10%; animation: fadeUp 700ms var(--ease-out) 600ms both; }
+    .hero__visual-tag--3 { bottom: 12%; left: 5%; animation: fadeUp 700ms var(--ease-out) 800ms both; }
+
+    @media (max-width: 880px) {
+      .hero { grid-template-columns: 1fr; gap: var(--s8); padding-top: var(--s6); }
+      .hero__visual { min-height: 360px; order: -1; }
+      .hero__visual-tag--1 { left: 4%; }
+      .hero__visual-tag--2 { right: 4%; }
+    }
+
+    /* ── Buttons ── */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: var(--s3);
+      font-family: var(--font-sans); font-weight: 600; font-size: 0.92rem;
+      letter-spacing: 0.01em; border: none; border-radius: var(--r-pill);
+      padding: 0.9rem 2rem; cursor: pointer;
+      transition: all var(--t-base) var(--ease-out);
+      text-align: center; line-height: 1; position: relative;
+    }
+    .btn--primary {
+      background: var(--primary); color: #fff;
+      box-shadow: 0 2px 16px var(--primary-glow), var(--shadow-subtle);
+    }
+    .btn--primary:hover {
+      background: var(--primary-hover);
+      box-shadow: 0 4px 28px var(--primary-glow), var(--shadow-sm);
+      transform: translateY(-2px);
+    }
+    .btn--primary:active { transform: translateY(0); }
+    .btn--lg { padding: 1.05rem 2.5rem; font-size: 1rem; }
+    .btn--xl { padding: 1.2rem 3rem; font-size: 1.05rem; }
+    .btn--ghost {
+      background: transparent; color: rgba(44,62,54,0.7);
+      border: 1px solid rgba(0,0,0,0.08); padding: 0.85rem 1.5rem;
+    }
+    .btn--ghost:hover { color: var(--ink); border-color: rgba(0,0,0,0.25); }
+    .btn--pulse { animation: btn-pulse 2.5s ease-in-out infinite; }
+
+    /* ── Two-column generic ── */
+    .two-col {
+      display: grid; grid-template-columns: 1fr 1fr; gap: var(--s8);
+      align-items: start;
+    }
+    @media (max-width: 768px) {
+      .two-col { grid-template-columns: 1fr; gap: var(--s6); }
+    }
+
+    /* ── Pain card ── */
+    .pain-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--r-xl);
+      padding: var(--s6);
+      backdrop-filter: blur(4px);
+      transition: all var(--t-base) var(--ease-out);
+    }
+    .pain-card:hover {
+      background: var(--glass-hover);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+    .pain-card__icon {
+      font-size: 1.8rem; margin-bottom: var(--s3);
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.12));
+    }
+    .pain-card__title {
+      font-family: var(--font-serif);
+      font-size: 1.35rem; line-height: 1.2;
+      color: var(--warm-white); margin-bottom: var(--s3);
+    }
+    .pain-card__list {
+      list-style: none; padding: 0;
+    }
+    .pain-card__list li {
+      display: flex; align-items: flex-start; gap: var(--s2);
+      font-size: 0.92rem; color: rgba(44,62,54,0.7); line-height: 1.5;
+      padding: var(--s2) 0;
+    }
+    .pain-card__list li::before {
+      content: '·'; color: var(--primary); font-weight: 700;
+      font-size: 1.4rem; line-height: 1; margin-top: -2px;
+    }
+
+    /* ── How-it-works cards (3 cols) ── */
+    .how-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s5);
+    }
+    @media (max-width: 768px) {
+      .how-grid { grid-template-columns: 1fr; gap: var(--s4); }
+    }
+    .how-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--r-xl);
+      padding: var(--s6);
+      backdrop-filter: blur(4px);
+      position: relative;
+      transition: all var(--t-base) var(--ease-out);
+    }
+    .how-card:hover {
+      background: var(--glass-hover);
+      border-color: rgba(74,158,126,0.2);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+    .how-card__step {
+      position: absolute; top: var(--s5); right: var(--s5);
+      font-family: var(--font-serif);
+      font-size: 2rem; line-height: 1;
+      color: rgba(74,158,126,0.25);
+    }
+    .how-card__icon {
+      font-size: 2rem; margin-bottom: var(--s4);
+      filter: drop-shadow(0 2px 6px rgba(74,158,126,0.15));
+    }
+    .how-card__title {
+      font-weight: 600; font-size: 1rem;
+      color: var(--warm-white); margin-bottom: var(--s2);
+      line-height: 1.3;
+    }
+    .how-card__desc {
+      font-size: 0.86rem; color: rgba(44,62,54,0.65); line-height: 1.55;
+    }
+    .how-card__desc strong { color: var(--primary); font-weight: 600; }
+
+    /* ── Benefit grid 2x2 ── */
+    .benefit-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: var(--s4);
+    }
+    @media (max-width: 600px) {
+      .benefit-grid { grid-template-columns: 1fr; }
+    }
+    .benefit-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--r-xl);
+      padding: var(--s6);
+      backdrop-filter: blur(4px);
+      transition: all var(--t-base) var(--ease-out);
+    }
+    .benefit-card:hover {
+      background: var(--glass-hover);
+      border-color: rgba(74,158,126,0.25);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+    .benefit-card__icon {
+      font-size: 2rem; margin-bottom: var(--s3);
+    }
+    .benefit-card__title {
+      font-weight: 600; font-size: 1.05rem;
+      color: var(--warm-white); margin-bottom: var(--s2);
+    }
+    .benefit-card__desc {
+      font-size: 0.88rem; color: rgba(44,62,54,0.65); line-height: 1.55;
+    }
+
+    /* ── Proof seals ── */
+    .proof-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s5);
+    }
+    @media (max-width: 768px) {
+      .proof-grid { grid-template-columns: 1fr; gap: var(--s4); }
+    }
+    .proof-seal {
+      background: linear-gradient(135deg, rgba(74,158,126,0.06), rgba(74,158,126,0.02));
+      border: 1px solid rgba(74,158,126,0.12);
+      border-radius: var(--r-xl);
+      padding: var(--s6);
+      text-align: center;
+    }
+    .proof-seal__icon {
+      font-size: 2.2rem; margin-bottom: var(--s3);
+    }
+    .proof-seal__title {
+      font-family: var(--font-serif);
+      font-size: 1.3rem; line-height: 1.15;
+      color: var(--warm-white); margin-bottom: var(--s2);
+    }
+    .proof-seal__desc {
+      font-size: 0.84rem; color: rgba(44,62,54,0.6); line-height: 1.5;
+    }
+    .proof-disclaimer {
+      text-align: center; font-size: 0.72rem;
+      color: rgba(0,0,0,0.3); margin-top: var(--s6);
+    }
+
+    /* ── Testimonials ── */
+    .testimonial-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s5);
+    }
+    @media (max-width: 880px) {
+      .testimonial-grid { grid-template-columns: 1fr; }
+    }
+    .testimonial-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--r-xl);
+      padding: var(--s6);
+      backdrop-filter: blur(4px);
+      display: flex; flex-direction: column;
+      transition: all var(--t-base) var(--ease-out);
+    }
+    .testimonial-card:hover {
+      background: var(--glass-hover);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+    .testimonial-card__stars {
+      color: var(--gold);
+      font-size: 0.9rem; letter-spacing: 0.1em;
+      margin-bottom: var(--s3);
+    }
+    .testimonial-card__text {
+      font-family: var(--font-serif);
+      font-size: 1.05rem; line-height: 1.45;
+      color: var(--warm-white);
+      margin-bottom: var(--s5);
+      font-style: italic;
+      flex-grow: 1;
+    }
+    .testimonial-card__author {
+      display: flex; align-items: center; gap: var(--s3);
+      padding-top: var(--s4);
+      border-top: 1px solid var(--glass-border);
+    }
+    .testimonial-card__avatar {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), #6ec4a0);
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; font-weight: 700; font-size: 0.95rem;
+      flex-shrink: 0;
+      box-shadow: var(--shadow-sm);
+    }
+    .testimonial-card__name {
+      font-weight: 600; font-size: 0.92rem;
+      color: var(--warm-white); line-height: 1.2;
+    }
+    .testimonial-card__meta {
+      font-size: 0.76rem; color: rgba(44,62,54,0.5);
+      margin-top: 2px;
+    }
+
+    /* ── Product section ── */
+    .product-feature {
+      background: rgba(255,255,255,0.5);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--r-2xl);
+      padding: var(--s10);
+      backdrop-filter: blur(6px);
+      display: grid; grid-template-columns: 1fr 1.1fr; gap: var(--s10);
+      align-items: center;
+    }
+    @media (max-width: 880px) {
+      .product-feature { grid-template-columns: 1fr; padding: var(--s6); gap: var(--s6); }
+    }
+    .product-image {
+      position: relative;
+      aspect-ratio: 1;
+      border-radius: var(--r-xl);
+      background:
+        radial-gradient(circle at 30% 30%, rgba(74,158,126,0.18), transparent 60%),
+        linear-gradient(135deg, rgba(74,158,126,0.08), rgba(74,158,126,0.02));
+      border: 1px solid rgba(74,158,126,0.1);
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden;
+    }
+    .product-image::before {
+      content: '';
+      position: absolute; inset: 20%;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(74,158,126,0.15) 0%, transparent 70%);
+    }
+    .product-image__placeholder {
+      position: relative; z-index: 1;
+      text-align: center;
+    }
+    .product-image__emoji {
+      font-size: 7rem;
+      filter: drop-shadow(0 8px 24px rgba(74,158,126,0.25));
+      margin-bottom: var(--s3);
+    }
+    .product-image__label {
+      font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: rgba(74,158,126,0.5);
+    }
+    .product-list {
+      list-style: none; padding: 0;
+      display: flex; flex-direction: column; gap: var(--s3);
+      margin-bottom: var(--s6);
+    }
+    .product-list li {
+      display: flex; align-items: flex-start; gap: var(--s3);
+      padding: var(--s3) 0;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      font-size: 0.92rem; color: var(--warm-white); line-height: 1.5;
+    }
+    .product-list li:last-child { border-bottom: none; }
+    .product-list li svg {
+      color: var(--primary); flex-shrink: 0; margin-top: 4px;
+    }
+    .product-list li strong { font-weight: 600; }
+    .moment-box {
+      background: linear-gradient(135deg, rgba(74,158,126,0.08), rgba(74,158,126,0.02));
+      border: 1px solid rgba(74,158,126,0.15);
+      border-radius: var(--r-xl);
+      padding: var(--s5);
+      display: flex; gap: var(--s3); align-items: flex-start;
+    }
+    .moment-box__icon { font-size: 1.4rem; flex-shrink: 0; }
+    .moment-box__text {
+      font-size: 0.9rem; color: rgba(44,62,54,0.8); line-height: 1.55;
+    }
+    .moment-box__text strong { color: var(--warm-white); font-weight: 600; }
+
+    /* ── Offer box ── */
+    .offer-wrap {
+      max-width: 640px; margin: 0 auto;
+    }
+    .offer-box {
+      background: linear-gradient(135deg, rgba(255,255,255,0.85), rgba(255,255,255,0.65));
+      border: 2px solid rgba(74,158,126,0.25);
+      border-radius: var(--r-2xl);
+      padding: var(--s10) var(--s8);
+      box-shadow: var(--shadow-lg), 0 0 60px rgba(74,158,126,0.08);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(8px);
+    }
+    .offer-box::before {
+      content: '';
+      position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+      background: conic-gradient(from 0deg, transparent 0%, rgba(74,158,126,0.05) 10%, transparent 20%);
+      animation: float-orb 12s linear infinite;
+      pointer-events: none;
+    }
+    .offer-box > * { position: relative; z-index: 1; }
+    .offer-box__product {
+      font-family: var(--font-serif);
+      font-size: 1.5rem; line-height: 1.2;
+      color: var(--warm-white);
+      margin-bottom: var(--s2);
+    }
+    .offer-box__protocol {
+      font-size: 0.78rem; color: var(--primary);
+      font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+      margin-bottom: var(--s5);
+    }
+    .offer-box__price {
+      display: flex; flex-direction: column; align-items: center;
+      gap: var(--s1);
+      margin-bottom: var(--s5);
+    }
+    .price-from {
+      font-size: 0.92rem;
+      color: rgba(44,62,54,0.45);
+      text-decoration: line-through;
+    }
+    .price-now {
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 4.5vw, 2.4rem);
+      line-height: 1.1;
+      color: var(--warm-white);
+    }
+    .price-now strong {
+      color: var(--primary); font-weight: 400;
+    }
+    .price-installment {
+      font-size: 0.86rem; color: rgba(44,62,54,0.6);
+      margin-top: var(--s1);
+    }
+    .offer-box .btn {
+      width: 100%; max-width: 380px;
+      margin: var(--s2) auto;
+    }
+    .offer-box__guarantee {
+      display: flex; align-items: center; justify-content: center; gap: var(--s2);
+      font-size: 0.88rem; color: rgba(44,62,54,0.7);
+      margin-top: var(--s5);
+      padding: var(--s4);
+      background: rgba(74,158,126,0.05);
+      border-radius: var(--r-md);
+    }
+    .offer-box__trust {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: var(--s4) var(--s6);
+      margin-top: var(--s4);
+    }
+    .offer-box__trust-item {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-size: 0.75rem; color: rgba(44,62,54,0.5);
+    }
+    .offer-box__trust-item svg { color: var(--primary); opacity: 0.8; }
+
+    /* ── FAQ ── */
+    .faq-wrap { max-width: 720px; margin: 0 auto; }
+    .faq-item {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--r-lg);
+      margin-bottom: var(--s3);
+      overflow: hidden;
+      transition: all var(--t-base) var(--ease-out);
+      backdrop-filter: blur(4px);
+    }
+    .faq-item[open] {
+      background: var(--glass-hover);
+      border-color: rgba(74,158,126,0.2);
+      box-shadow: var(--shadow-sm);
+    }
+    .faq-item summary {
+      cursor: pointer;
+      padding: var(--s5) var(--s6);
+      font-weight: 600; font-size: 0.98rem;
+      color: var(--warm-white);
+      list-style: none;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: var(--s4);
+      transition: color var(--t-fast);
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: '+';
+      font-size: 1.5rem; font-weight: 400;
+      color: var(--primary);
+      transition: transform var(--t-base) var(--ease-out);
+      flex-shrink: 0;
+      line-height: 1;
+    }
+    .faq-item[open] summary::after {
+      content: '−';
+      transform: rotate(180deg);
+    }
+    .faq-item summary:hover { color: var(--primary); }
+    .faq-item__body {
+      padding: 0 var(--s6) var(--s5);
+      font-size: 0.92rem; color: rgba(44,62,54,0.75); line-height: 1.65;
+    }
+
+    /* ── Final CTA ── */
+    .final-cta {
+      text-align: center;
+      padding: var(--s16) var(--s6);
+      background: linear-gradient(135deg, rgba(74,158,126,0.08), rgba(74,158,126,0.02));
+      border-radius: var(--r-2xl);
+      border: 1px solid rgba(74,158,126,0.1);
+      margin-bottom: var(--s12);
+    }
+    .final-cta__title {
+      font-family: var(--font-serif); font-weight: 400;
+      font-size: clamp(1.8rem, 4.5vw, 2.6rem); line-height: 1.1;
+      color: var(--warm-white); margin-bottom: var(--s4);
+      letter-spacing: -0.01em;
+    }
+    .final-cta__sub {
+      font-size: 1rem; color: rgba(44,62,54,0.65);
+      max-width: 480px; margin: 0 auto var(--s8);
+    }
+
+    /* ── Footer ── */
+    .lp-footer {
+      text-align: center;
+      padding: var(--s8) var(--s6) var(--s10);
+      border-top: 1px solid rgba(0,0,0,0.05);
+      max-width: 1100px; margin: 0 auto;
+    }
+    .lp-footer__logo {
+      display: flex; align-items: center; justify-content: center; gap: 6px;
+      margin-bottom: var(--s3);
+    }
+    .lp-footer__logo-text {
+      font-weight: 700; font-size: 0.72rem;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      color: rgba(0,0,0,0.15);
+    }
+    .lp-footer__text {
+      font-size: 0.72rem; color: rgba(44,62,54,0.4);
+      line-height: 1.7;
+      margin-bottom: var(--s3);
+    }
+    .lp-footer__links {
+      display: flex; justify-content: center; gap: var(--s4);
+      flex-wrap: wrap;
+      font-size: 0.72rem;
+    }
+    .lp-footer__links a {
+      color: rgba(44,62,54,0.5);
+      transition: color var(--t-fast);
+    }
+    .lp-footer__links a:hover { color: var(--primary); }
+    .lp-footer__legal {
+      font-size: 0.68rem; color: rgba(0,0,0,0.25);
+      margin-top: var(--s4);
+      max-width: 720px; margin-left: auto; margin-right: auto;
+    }
+
+    /* ── Sticky CTA mobile ── */
+    .sticky-cta {
+      position: fixed; bottom: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(16px) saturate(1.2);
+      -webkit-backdrop-filter: blur(16px) saturate(1.2);
+      border-top: 1px solid rgba(0,0,0,0.06);
+      padding: var(--s3) var(--s4);
+      display: none;
+      align-items: center; justify-content: space-between;
+      gap: var(--s4);
+      box-shadow: 0 -4px 24px rgba(0,0,0,0.06);
+    }
+    .sticky-cta.visible {
+      display: flex;
+      animation: slideUpSticky 350ms var(--ease-out);
+    }
+    .sticky-cta__info {
+      display: flex; flex-direction: column;
+      flex-grow: 1;
+      min-width: 0;
+    }
+    .sticky-cta__label {
+      font-size: 0.65rem;
+      color: rgba(44,62,54,0.5);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 600;
+    }
+    .sticky-cta__price {
+      font-weight: 700; font-size: 0.92rem;
+      color: var(--warm-white);
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+    .sticky-cta__price strong { color: var(--primary); }
+    .sticky-cta .btn {
+      padding: 0.75rem 1.3rem; font-size: 0.86rem;
+      flex-shrink: 0;
+    }
+    @media (min-width: 769px) {
+      .sticky-cta.visible { display: none; }
+    }
+
+    /* Add padding to body when sticky visible on mobile */
+    @media (max-width: 768px) {
+      body.has-sticky { padding-bottom: 72px; }
+    }
+
+    /* ── Responsive misc ── */
+    @media (max-width: 480px) {
+      .lp { padding: 0 var(--s4); }
+      .topbar { padding: var(--s4) var(--s4) 0; }
+      .section { padding: var(--s12) 0; }
+      .hero { padding: var(--s6) 0 var(--s10); }
+      .product-feature { padding: var(--s5); }
+      .offer-box { padding: var(--s8) var(--s5); }
+      .final-cta { padding: var(--s10) var(--s5); }
+    }
+
+    /* Stagger entrance for grids */
+    .stagger > * { animation: fadeUp 500ms var(--ease-out) both; }
+    .stagger > *:nth-child(1) { animation-delay: 80ms; }
+    .stagger > *:nth-child(2) { animation-delay: 160ms; }
+    .stagger > *:nth-child(3) { animation-delay: 240ms; }
+    .stagger > *:nth-child(4) { animation-delay: 320ms; }
+  </style>
+</head>
+<body>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="lp-bg" aria-hidden="true">
+    <div class="lp-bg__orb lp-bg__orb--1"></div>
+    <div class="lp-bg__orb lp-bg__orb--2"></div>
+    <div class="lp-bg__orb lp-bg__orb--3"></div>
+  </div>
+
+  <!-- ─── Topbar ─── -->
+  <header class="topbar">
+    <div class="brand-logo">
+      <div class="brand-logo__mark">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2L4 6v6c0 5.55 3.84 10.74 8 12 4.16-1.26 8-6.45 8-12V6l-8-4z" fill="white" opacity="0.9"/><path d="M9 12l2 2 4-4" stroke="#4a9e7e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <span class="brand-logo__text">Stem</span>
+    </div>
+    <a href="#oferta" class="topbar__cta" data-cta="topbar">Quero meu colágeno →</a>
+  </header>
+
+  <main class="lp">
+
+    <!-- ─── 1. HERO ─── -->
+    <section class="hero">
+      <div class="hero__content">
+        <div class="hero__badge">
+          <span class="hero__badge-dot"></span>
+          Tecnologia VERISOL® · Registro ANVISA
+        </div>
+        <h1 class="hero__title">
+          Firmeza por dentro.<br><em>Confiança por fora.</em>
+        </h1>
+        <p class="hero__sub">
+          Colágeno hidrolisado com tecnologia clínica <strong>VERISOL®</strong> — apoia <strong>pele firme, cabelo, unhas e articulações</strong> em um único protocolo diário.
+        </p>
+        <div class="hero__actions">
+          <a href="#oferta" class="btn btn--primary btn--lg btn--pulse" data-cta="hero">
+            <span>Quero meu Colágeno Stem</span>
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3.75 9h10.5m0 0L9.75 4.5M14.25 9l-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+        <div class="hero__proof">
+          <div class="hero__proof-item">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M2 8.5l4 4 8-8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Registro ANVISA</span>
+          </div>
+          <div class="hero__proof-item">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M2 8.5l4 4 8-8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Produção farmacêutica própria</span>
+          </div>
+          <div class="hero__proof-item">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M2 8.5l4 4 8-8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span>Evidência clínica</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- TODO: substituir por <img src="..."> com packshot real do produto -->
+      <div class="hero__visual" aria-hidden="true">
+        <div class="hero__visual-placeholder">
+          <div class="hero__visual-emoji">🧴</div>
+          <div class="hero__visual-label">Packshot aqui</div>
+        </div>
+        <span class="hero__visual-tag hero__visual-tag--1">
+          <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M2 8.5l4 4 8-8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          VERISOL®
+        </span>
+        <span class="hero__visual-tag hero__visual-tag--2">
+          <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M2 8.5l4 4 8-8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          10g por dose
+        </span>
+        <span class="hero__visual-tag hero__visual-tag--3">
+          <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M2 8.5l4 4 8-8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          30 doses
+        </span>
+      </div>
+    </section>
+
+    <!-- ─── 2. DOR / IDENTIFICAÇÃO ─── -->
+    <section class="section section--center">
+      <div class="section__eyebrow">Por que você sente isso</div>
+      <h2 class="section__title">A partir dos 30, seu corpo produz <em>menos colágeno</em> todo ano.</h2>
+      <p class="section__sub">
+        A queda é fisiológica — em torno de 1% ao ano. Você sente em duas frentes ao mesmo tempo: na sua aparência e na sua mobilidade. A boa notícia é que dá pra repor o que falta com a molécula certa.
+      </p>
+      <div class="two-col stagger" style="text-align:left;">
+        <div class="pain-card">
+          <div class="pain-card__icon">✨</div>
+          <h3 class="pain-card__title">Pele, cabelo e unhas</h3>
+          <ul class="pain-card__list">
+            <li>Linhas finas que ficaram mais visíveis no espelho</li>
+            <li>Perda de firmeza no rosto, pescoço e colo</li>
+            <li>Cabelo mais quebradiço e ressecado</li>
+            <li>Unhas fracas que descamam e racham</li>
+          </ul>
+        </div>
+        <div class="pain-card">
+          <div class="pain-card__icon">🦴</div>
+          <h3 class="pain-card__title">Articulações e mobilidade</h3>
+          <ul class="pain-card__list">
+            <li>Rigidez ao acordar ou depois de sentar muito</li>
+            <li>Dor leve nos joelhos ao subir escadas</li>
+            <li>Recuperação mais lenta depois do treino</li>
+            <li>Aquela sensação de que o corpo "trava"</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── 3. SOLUÇÃO / COMO FUNCIONA ─── -->
+    <section class="section section--center">
+      <div class="section__eyebrow">Como o Colágeno Stem age</div>
+      <h2 class="section__title">Peptídeos bioativos <em>VERISOL®</em>, clinicamente testados.</h2>
+      <p class="section__sub">
+        Não é colágeno comum. VERISOL® é uma tecnologia patenteada com fragmentos específicos que o corpo reconhece como sinal — e responde produzindo mais colágeno próprio.
+      </p>
+      <div class="how-grid stagger" style="text-align:left;">
+        <div class="how-card">
+          <span class="how-card__step">01</span>
+          <div class="how-card__icon">🧬</div>
+          <h3 class="how-card__title">Peptídeos específicos</h3>
+          <p class="how-card__desc">Fragmentos de <strong>baixo peso molecular</strong> que o intestino absorve em até 60 minutos e a corrente sanguínea distribui para pele e articulações.</p>
+        </div>
+        <div class="how-card">
+          <span class="how-card__step">02</span>
+          <div class="how-card__icon">🎯</div>
+          <h3 class="how-card__title">Sinalização celular</h3>
+          <p class="how-card__desc">Estimulam <strong>fibroblastos</strong> (na pele) e <strong>condrócitos</strong> (na cartilagem) a produzirem mais colágeno endógeno e ácido hialurônico.</p>
+        </div>
+        <div class="how-card">
+          <span class="how-card__step">03</span>
+          <div class="how-card__icon">⏱️</div>
+          <h3 class="how-card__title">Resultado clínico</h3>
+          <p class="how-card__desc">Estudos mostram melhora visível em <strong>4 a 8 semanas</strong> de uso contínuo — em firmeza da pele, hidratação e conforto articular.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── 4. BENEFÍCIOS DUAIS ─── -->
+    <section class="section section--center">
+      <div class="section__eyebrow">O que você sente em 60 dias</div>
+      <h2 class="section__title">Um suplemento. <em>Dois territórios cuidados.</em></h2>
+      <p class="section__sub">
+        Você não precisa escolher entre cuidar da aparência ou da mobilidade. O Colágeno Stem foi formulado para atender as duas frentes com a mesma dose diária.
+      </p>
+      <div class="benefit-grid stagger" style="text-align:left;">
+        <div class="benefit-card">
+          <div class="benefit-card__icon">✨</div>
+          <div class="benefit-card__title">Pele mais firme</div>
+          <p class="benefit-card__desc">Mais elasticidade, hidratação profunda e redução de linhas finas. A pele responde de dentro para fora.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-card__icon">💇</div>
+          <div class="benefit-card__title">Cabelo e unhas fortes</div>
+          <p class="benefit-card__desc">Menos quebra, mais brilho e crescimento saudável. Unhas que voltam a aguentar o dia a dia.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-card__icon">🦴</div>
+          <div class="benefit-card__title">Articulações protegidas</div>
+          <p class="benefit-card__desc">Menos rigidez matinal e mais conforto em movimentos do dia a dia — descer escada, levantar do sofá, agachar.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-card__icon">🏃</div>
+          <div class="benefit-card__title">Recuperação acelerada</div>
+          <p class="benefit-card__desc">Suporte para quem treina ou tem rotina ativa. Recuperação muscular e articular mais rápida entre os treinos.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── 5. PROVA CIENTÍFICA ─── -->
+    <section class="section section--center">
+      <div class="section__eyebrow">Tecnologia validada</div>
+      <h2 class="section__title">VERISOL® tem mais de <em>10 estudos clínicos</em> publicados.</h2>
+      <p class="section__sub">
+        Não é promessa de marketing — é ciência feita por uma das maiores indústrias de colágeno do mundo, e produção farmacêutica brasileira regulamentada.
+      </p>
+      <div class="proof-grid stagger">
+        <div class="proof-seal">
+          <div class="proof-seal__icon">📊</div>
+          <h3 class="proof-seal__title">+10 estudos clínicos</h3>
+          <p class="proof-seal__desc">Randomizados, duplo-cegos e controlados por placebo. Eficácia comprovada em humanos.</p>
+        </div>
+        <div class="proof-seal">
+          <div class="proof-seal__icon">🏥</div>
+          <h3 class="proof-seal__title">Tecnologia alemã</h3>
+          <p class="proof-seal__desc">Peptídeos patenteados pela GELITA®, referência global em pesquisa de colágeno desde 1875.</p>
+        </div>
+        <div class="proof-seal">
+          <div class="proof-seal__icon">✅</div>
+          <h3 class="proof-seal__title">Padrão farmacêutico Stem</h3>
+          <p class="proof-seal__desc">Registro ANVISA, fábrica própria e controle de qualidade em cada lote.</p>
+        </div>
+      </div>
+      <p class="proof-disclaimer">Bibliografia científica disponível mediante solicitação no nosso SAC.</p>
+    </section>
+
+    <!-- ─── 6. DEPOIMENTOS ─── -->
+    <section class="section section--center">
+      <div class="section__eyebrow">Quem já usa</div>
+      <h2 class="section__title">Resultados reais de quem <em>confia na Stem.</em></h2>
+      <p class="section__sub">Mais de [TODO: nº] clientes ativos no protocolo de colágeno. Aqui estão três deles.</p>
+
+      <div class="testimonial-grid stagger" style="text-align:left;">
+
+        <!-- TODO: substituir por depoimento real (foco beleza) -->
+        <article class="testimonial-card">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p class="testimonial-card__text">"Depois de 60 dias, minha pele do colo voltou a ter firmeza. Foi a primeira coisa que minha irmã notou — e ela nem sabia que eu estava tomando."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">M</div>
+            <div>
+              <div class="testimonial-card__name">Marina, 42</div>
+              <div class="testimonial-card__meta">São Paulo · usa há 4 meses</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- TODO: substituir por depoimento real (foco articulação) -->
+        <article class="testimonial-card">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p class="testimonial-card__text">"Voltei a correr sem dor no joelho. Achei que era idade — era só falta de colágeno mesmo. Em 8 semanas a diferença foi clara."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">R</div>
+            <div>
+              <div class="testimonial-card__name">Ricardo, 51</div>
+              <div class="testimonial-card__meta">Belo Horizonte · usa há 6 meses</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- TODO: substituir por depoimento real (foco misto) -->
+        <article class="testimonial-card">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p class="testimonial-card__text">"Comecei pelo cabelo, fiquei pela articulação. Unha cresce forte, cabelo cai bem menos e levanto da cama sem aquela rigidez de antes."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">A</div>
+            <div>
+              <div class="testimonial-card__name">Ana Paula, 47</div>
+              <div class="testimonial-card__meta">Curitiba · usa há 5 meses</div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ─── 7. O PRODUTO ─── -->
+    <section class="section">
+      <div class="section--center">
+        <div class="section__eyebrow" style="justify-content:center; display:inline-flex;">O que tem no frasco</div>
+        <h2 class="section__title" style="text-align:center; margin-left:auto; margin-right:auto;">Colágeno Stem — <em>protocolo de 30 dias.</em></h2>
+      </div>
+
+      <div class="product-feature">
+        <!-- TODO: substituir por <img> com packshot real do produto -->
+        <div class="product-image" aria-hidden="true">
+          <div class="product-image__placeholder">
+            <div class="product-image__emoji">🧴</div>
+            <div class="product-image__label">Packshot aqui</div>
+          </div>
+        </div>
+
+        <div>
+          <ul class="product-list">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M2 8.5l4 4 8-8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span><strong>10g de Colágeno Hidrolisado VERISOL®</strong> por dose</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M2 8.5l4 4 8-8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span><strong>Vitamina C</strong> — cofator essencial da síntese de colágeno endógeno</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M2 8.5l4 4 8-8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span><strong>Sem açúcar, sem glúten, sem lactose</strong></span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M2 8.5l4 4 8-8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span><strong>30 doses</strong> por embalagem — 1 mês completo de protocolo</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M2 8.5l4 4 8-8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <!-- TODO: confirmar sabor do produto (neutro / laranja / etc.) -->
+              <span>Sabor <strong>[TODO: confirmar sabor]</strong> — dissolve fácil em água ou suco</span>
+            </li>
+          </ul>
+          <div class="moment-box">
+            <span class="moment-box__icon">⏰</span>
+            <p class="moment-box__text">
+              <strong>Como tomar:</strong> 1 dose ao dia, dissolvida em 200ml de água ou suco. A constância nos primeiros 60 dias é o que faz toda a diferença.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── 8. OFERTA ─── -->
+    <section class="section section--center" id="oferta">
+      <div class="section__eyebrow" style="justify-content:center; display:inline-flex;">Comece hoje</div>
+      <h2 class="section__title" style="text-align:center; margin-left:auto; margin-right:auto;">Pronto para começar seu <em>protocolo de 30 dias</em>?</h2>
+      <p class="section__sub" style="margin-left:auto; margin-right:auto;">Frete grátis para todo o Brasil. Garantia de satisfação. Sem fidelidade.</p>
+
+      <div class="offer-wrap">
+        <div class="offer-box">
+          <div class="offer-box__protocol">Protocolo Pele · Articulação</div>
+          <h3 class="offer-box__product">Colágeno Stem com VERISOL®</h3>
+
+          <!-- TODO: substituir pelo preço real, parcelas e desconto -->
+          <div class="offer-box__price">
+            <span class="price-from">De R$ XXX,00</span>
+            <span class="price-now"><strong>12x R$ XX,XX</strong></span>
+            <span class="price-installment">ou R$ XXX,00 à vista com 10% off</span>
+          </div>
+
+          <!-- TODO: substituir href pelo URL real do checkout -->
+          <a href="#checkout" class="btn btn--primary btn--xl btn--pulse" data-cta="offer" onclick="handleCheckout(event)">
+            <span>Quero meu Colágeno Stem agora</span>
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3.75 9h10.5m0 0L9.75 4.5M14.25 9l-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+
+          <div class="offer-box__guarantee">
+            <span>🛡️</span>
+            <span><strong>Garantia incondicional de 30 dias.</strong> Não gostou, devolvemos seu dinheiro.</span>
+          </div>
+
+          <div class="offer-box__trust">
+            <span class="offer-box__trust-item">
+              <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M2 8.5l4 4 8-8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Frete grátis
+            </span>
+            <span class="offer-box__trust-item">
+              <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M8 1L2 4v4.5c0 3.5 2.5 5.6 6 7 3.5-1.4 6-3.5 6-7V4L8 1z" stroke="currentColor" stroke-width="1.2"/></svg>
+              Pagamento seguro
+            </span>
+            <span class="offer-box__trust-item">
+              <svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M2 8.5l4 4 8-8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Suporte humano
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── 9. FAQ ─── -->
+    <section class="section">
+      <div class="section--center">
+        <div class="section__eyebrow" style="justify-content:center; display:inline-flex;">Dúvidas comuns</div>
+        <h2 class="section__title" style="text-align:center; margin-left:auto; margin-right:auto;">O que perguntam antes <em>de começar</em></h2>
+      </div>
+
+      <div class="faq-wrap">
+        <details class="faq-item">
+          <summary>Em quanto tempo vou sentir resultado?</summary>
+          <div class="faq-item__body">
+            Os estudos com VERISOL® mostram melhora visível entre <strong>4 e 8 semanas</strong> de uso contínuo. Cabelo e unhas tendem a responder primeiro; firmeza da pele e conforto articular costumam aparecer entre o segundo e o terceiro mês. O segredo é constância — uma dose por dia, todos os dias.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Posso tomar se já uso outros suplementos?</summary>
+          <div class="faq-item__body">
+            Sim. Colágeno hidrolisado é um nutriente protéico e se combina bem com vitamina C, ômega 3, magnésio, biotina e outros suplementos comuns. Se você faz uso de medicação contínua, consulte seu médico.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Gestantes e lactantes podem tomar?</summary>
+          <div class="faq-item__body">
+            Recomendamos sempre consultar o obstetra antes de iniciar qualquer suplementação durante gestação ou amamentação. A formulação é segura, mas a decisão final cabe ao profissional que acompanha você.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Funciona para homem também?</summary>
+          <div class="faq-item__body">
+            Sim. A queda fisiológica de colágeno acontece em todos a partir dos 30, independente do sexo. Os benefícios para articulação, cabelo e firmeza da pele são iguais — VERISOL® já foi testado em estudos com homens e mulheres.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>E se eu não gostar do produto?</summary>
+          <div class="faq-item__body">
+            Você tem <strong>30 dias de garantia incondicional</strong>. Não gostou do sabor, da textura ou de qualquer aspecto do produto — basta nos avisar e devolvemos 100% do valor pago. Sem pergunta, sem burocracia.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Como sei que o colágeno é VERISOL® original?</summary>
+          <div class="faq-item__body">
+            VERISOL® é uma marca registrada da GELITA® (Alemanha), e cada lote nosso passa por rastreabilidade da matéria-prima até o frasco. Você pode solicitar o laudo técnico do seu lote a qualquer momento pelo nosso SAC.
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <!-- ─── 10. CTA FINAL ─── -->
+    <section class="section section--tight">
+      <div class="final-cta">
+        <h2 class="final-cta__title">Seus próximos <em>60 dias</em> começam hoje.</h2>
+        <p class="final-cta__sub">Constância gera resultado. Comece agora e veja a diferença até o fim do segundo mês.</p>
+        <a href="#oferta" class="btn btn--primary btn--xl btn--pulse" data-cta="final">
+          <span>Quero meu Colágeno Stem</span>
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3.75 9h10.5m0 0L9.75 4.5M14.25 9l-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ─── Footer ─── -->
+  <footer class="lp-footer">
+    <div class="lp-footer__logo">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2L4 6v6c0 5.55 3.84 10.74 8 12 4.16-1.26 8-6.45 8-12V6l-8-4z" fill="rgba(0,0,0,0.12)"/></svg>
+      <span class="lp-footer__logo-text">Stem Pharmaceutical</span>
+    </div>
+    <p class="lp-footer__text">
+      Registro ANVISA · Produção farmacêutica própria · Baseado em evidência clínica
+    </p>
+    <div class="lp-footer__links">
+      <!-- TODO: substituir # pelos links reais -->
+      <a href="#">Política de privacidade</a>
+      <a href="#">Termos de uso</a>
+      <a href="#">Contato / SAC</a>
+    </div>
+    <p class="lp-footer__legal">
+      Este suplemento alimentar não é medicamento e não se destina a prevenir, tratar ou curar doenças. Resultados podem variar conforme rotina, idade e organismo. Consulte sempre um profissional de saúde.
+    </p>
+  </footer>
+
+  <!-- ─── Sticky CTA Mobile ─── -->
+  <!-- TODO: substituir href pelo URL real do checkout -->
+  <div class="sticky-cta" id="stickyCta" aria-hidden="true">
+    <div class="sticky-cta__info">
+      <span class="sticky-cta__label">Colágeno Stem · VERISOL®</span>
+      <span class="sticky-cta__price"><strong>12x R$ XX,XX</strong> · frete grátis</span>
+    </div>
+    <a href="#oferta" class="btn btn--primary" data-cta="sticky">
+      <span>Comprar →</span>
+    </a>
+  </div>
+
+  <script>
+  (function() {
+    'use strict';
+
+    // ── Tracking ──
+    function trackEvent(name, params) {
+      try {
+        if (typeof gtag === 'function') gtag('event', name, params || {});
+        if (typeof fbq === 'function') fbq('trackCustom', name, params || {});
+      } catch(e) {}
+      console.log('[LP Event]', name, params || {});
+    }
+
+    // ── Page view ──
+    trackEvent('lp_colageno_view');
+
+    // ── CTA clicks ──
+    document.querySelectorAll('[data-cta]').forEach(function(el) {
+      el.addEventListener('click', function() {
+        var position = el.getAttribute('data-cta');
+        trackEvent('lp_colageno_cta_click', { position: position });
+      });
+    });
+
+    // ── Checkout redirect ──
+    window.handleCheckout = function(e) {
+      trackEvent('lp_colageno_checkout_redirect');
+      // TODO: substituir pela URL real do checkout
+      // window.location.href = 'https://loja.stem.com.br/checkout/colageno';
+    };
+
+    // ── Sticky CTA show/hide ──
+    var sticky = document.getElementById('stickyCta');
+    var heroEl = document.querySelector('.hero');
+    var offerEl = document.getElementById('oferta');
+    var threshold = 600;
+
+    function onScroll() {
+      var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+      var offerRect = offerEl.getBoundingClientRect();
+      var offerInView = offerRect.top < window.innerHeight && offerRect.bottom > 0;
+
+      if (scrolled > threshold && !offerInView) {
+        if (!sticky.classList.contains('visible')) {
+          sticky.classList.add('visible');
+          document.body.classList.add('has-sticky');
+        }
+      } else {
+        sticky.classList.remove('visible');
+        document.body.classList.remove('has-sticky');
+      }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    // ── Intersection observer for section animations ──
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.style.animationPlayState = 'running';
+          }
+        });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.section').forEach(function(s) {
+        io.observe(s);
+      });
+    }
+  })();
+  </script>
+
+</body>
+</html>
