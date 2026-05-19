@@ -1450,8 +1450,8 @@
     /* Hero product polaroid (posicionada absoluta sobre a foto da mulher) */
     .hero-ed__product {
       position: absolute;
-      top: var(--s6); right: var(--s8);
-      width: 160px;
+      bottom: 22%; right: var(--s6);
+      width: 175px;
       z-index: 4;
       transform: rotate(3deg);
       transition: transform 600ms var(--ease-out);
@@ -1459,6 +1459,84 @@
     .hero-ed__product:hover { transform: rotate(0deg) translateY(-4px); }
     .hero-ed__product .product-polaroid__caption {
       color: rgba(26,47,71,0.7);
+    }
+
+    /* BIG NUMBER editorial — "60" gigante */
+    .hero-ed__big-number {
+      position: absolute;
+      left: -3%; bottom: 18%;
+      z-index: 2;
+      pointer-events: none;
+      display: flex; flex-direction: column;
+      align-items: flex-start;
+    }
+    .hero-ed__big-number-num {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: clamp(9rem, 22vw, 17rem);
+      font-weight: 400;
+      line-height: 0.85;
+      color: var(--gold-light);
+      letter-spacing: -0.05em;
+      text-shadow: 0 6px 32px rgba(0,0,0,0.35);
+      opacity: 0.92;
+    }
+    .hero-ed__big-number-label {
+      font-family: var(--font-sans);
+      font-size: 0.66rem;
+      font-weight: 700;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+      margin-top: var(--s3);
+      margin-left: 18%;
+      display: flex; align-items: center; gap: var(--s2);
+    }
+    .hero-ed__big-number-label::before {
+      content: ''; width: 24px; height: 1px;
+      background: rgba(255,255,255,0.4);
+    }
+
+    /* Rating card flutuante */
+    .hero-ed__rating {
+      position: absolute;
+      top: var(--s8); right: var(--s8);
+      z-index: 5;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(14px);
+      border-radius: var(--r-md);
+      padding: var(--s4) var(--s5);
+      display: flex; flex-direction: column; gap: 4px;
+      box-shadow:
+        0 16px 40px rgba(15,45,74,0.28),
+        0 4px 12px rgba(15,45,74,0.10);
+      transform: rotate(-2.5deg);
+      transition: transform var(--t-base) var(--ease-out);
+      max-width: 210px;
+    }
+    .hero-ed__rating:hover {
+      transform: rotate(0deg) translateY(-3px);
+    }
+    .hero-ed__rating-stars {
+      color: var(--gold);
+      font-size: 0.95rem;
+      letter-spacing: 2px;
+      line-height: 1;
+      margin-bottom: 2px;
+    }
+    .hero-ed__rating-brand {
+      font-weight: 700;
+      font-size: 0.82rem;
+      color: var(--warm-white);
+      letter-spacing: 0.01em;
+      line-height: 1.2;
+    }
+    .hero-ed__rating-sub {
+      font-size: 0.68rem;
+      color: rgba(26,47,71,0.55);
+      letter-spacing: 0.02em;
+      line-height: 1.4;
+      margin-top: 2px;
     }
 
     /* Solution polaroid (sobreposta sobre a foto da seção solution) */
@@ -1695,6 +1773,50 @@
       color: var(--primary); flex-shrink: 0;
     }
 
+    /* Specs editorial — 4 colunas com info técnica real */
+    .offer-ed__specs {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 0;
+      border-top: 1px solid rgba(15,45,74,0.08);
+      border-bottom: 1px solid rgba(15,45,74,0.08);
+      margin: var(--s2) 0;
+    }
+    .spec {
+      padding: var(--s4) var(--s5);
+      border-right: 1px solid rgba(15,45,74,0.06);
+    }
+    .spec:nth-child(2n) { border-right: none; }
+    .spec:nth-child(-n+2) { border-bottom: 1px solid rgba(15,45,74,0.06); }
+    .spec__label {
+      font-size: 0.6rem; font-weight: 700;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: var(--s2);
+      display: flex; align-items: center; gap: 6px;
+    }
+    .spec__label::before {
+      content: ''; width: 4px; height: 4px;
+      border-radius: 50%; background: var(--gold);
+    }
+    .spec__value {
+      font-size: 0.85rem;
+      line-height: 1.55;
+      color: var(--warm-white);
+      font-weight: 500;
+    }
+    .spec__value strong {
+      font-family: var(--font-serif); font-style: italic; font-weight: 400;
+      font-size: 1.05em;
+      color: var(--primary);
+    }
+    .spec__value small {
+      display: block;
+      font-size: 0.7rem;
+      color: rgba(26,47,71,0.55);
+      margin-top: 2px;
+      letter-spacing: 0.02em;
+    }
+
     .offer-ed__price-block {
       padding: var(--s2) 0;
     }
@@ -1923,7 +2045,6 @@
     <div class="hero-ed__left">
       <div class="hero-ed__top">
         <div class="hero-ed__brand">Stem<span class="hero-ed__brand-dot"></span></div>
-        <div class="ed-issue">Issue 001 — Biotina</div>
       </div>
 
       <div>
@@ -1978,6 +2099,20 @@
            decoding="async">
       <div class="hero-ed__photo-overlay"></div>
 
+      <!-- Big number editorial — "60" gigante atrás da foto -->
+      <div class="hero-ed__big-number" aria-hidden="true">
+        <span class="hero-ed__big-number-num">60</span>
+        <span class="hero-ed__big-number-label">dias de resultado</span>
+      </div>
+
+      <!-- Rating card flutuante -->
+      <div class="hero-ed__rating">
+        <div class="hero-ed__rating-stars" aria-label="5 estrelas">★★★★★</div>
+        <div class="hero-ed__rating-brand">Stem Pharmaceutical</div>
+        <div class="hero-ed__rating-sub">Avaliado por nutricionistas · ANVISA</div>
+      </div>
+
+      <!-- Product polaroid -->
       <div class="hero-ed__product">
         <div class="product-polaroid">
           <img src="https://images.tcdn.com.br/img/img_prod/764720/90_biotina_plus_60_comprimidos_stem_245_1_74afff6a355b9b3c1b74082547c45970.jpg"
@@ -2391,24 +2526,37 @@
           <h3 class="offer-ed__name">Biotina <em>com Luteína.</em></h3>
           <p class="offer-ed__sub">60 comprimidos · 45µg biotina + 10mg luteína · 2 meses de uso</p>
 
-          <ul class="offer-ed__features">
-            <li class="offer-ed__feature">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-              Sem glúten
-            </li>
-            <li class="offer-ed__feature">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-              Sem lactose
-            </li>
-            <li class="offer-ed__feature">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-              Stem Pharmaceutical
-            </li>
-            <li class="offer-ed__feature">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-              Entrega Brasil
-            </li>
-          </ul>
+          <div class="offer-ed__specs">
+            <div class="spec">
+              <div class="spec__label">Composição</div>
+              <div class="spec__value">
+                <strong>45 µg</strong> biotina (B7)<br>
+                <strong>10 mg</strong> luteína
+                <small>150% do valor diário · VD</small>
+              </div>
+            </div>
+            <div class="spec">
+              <div class="spec__label">Modo de uso</div>
+              <div class="spec__value">
+                <strong>1</strong> comprimido/dia
+                <small>Tomar com água, em qualquer horário</small>
+              </div>
+            </div>
+            <div class="spec">
+              <div class="spec__label">Duração</div>
+              <div class="spec__value">
+                <strong>60</strong> comprimidos
+                <small>2 meses de uso contínuo</small>
+              </div>
+            </div>
+            <div class="spec">
+              <div class="spec__label">Certificação</div>
+              <div class="spec__value">
+                <strong>Stem</strong> Pharmaceutical
+                <small>Sem glúten · sem lactose · SKU PRA 186</small>
+              </div>
+            </div>
+          </div>
 
           <div class="offer-ed__price-block">
             <div class="offer-ed__price-label">Investimento</div>
