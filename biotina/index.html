@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#0f2d4a">
 
   <title>Biotina Plus — Cabelo, pele e unhas que falam por você | Stem</title>
-  <meta name="description" content="Biotina Plus da Stem: dose validada, produção farmacêutica e selo ANVISA. Para cabelo mais forte, pele com viço e unhas que crescem sem quebrar.">
+  <meta name="description" content="Biotina Plus com Luteína da Stem Pharmaceutical: 45µg biotina + 10mg luteína. 60 comprimidos · 3x sem juros. Saúde de cabelo, pele e unhas.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://loja.stem.com.br/biotina-plus-60-comprimidos-stem">
 
@@ -62,7 +62,7 @@
     "@type": "Product",
     "name": "Biotina Plus - 60 comprimidos",
     "sku": "PRA 186",
-    "description": "Biotina (vitamina B7) em comprimido. Auxilia na formação de colágeno e elastina, contribui para a saúde capilar e das unhas, com ação antioxidante. Sem glúten, sem lactose.",
+    "description": "Biotina (45µg) com Luteína (10mg) em comprimido. Auxilia na formação de colágeno e elastina, contribui para a saúde capilar, das unhas e da pele, com ação antioxidante. Sem glúten, sem lactose.",
     "brand": {
       "@type": "Brand",
       "name": "Stem Pharmaceutical"
@@ -1421,6 +1421,55 @@
       color: rgba(26,47,71,0.5);
     }
 
+    /* ── PRODUCT POLAROID — frasco real ── */
+    .product-polaroid {
+      background: #fff;
+      padding: 16px 16px 22px;
+      box-shadow:
+        0 24px 60px rgba(15,45,74,0.22),
+        0 6px 16px rgba(15,45,74,0.10);
+      border-radius: 6px;
+      display: inline-block;
+      transition: transform var(--t-base) var(--ease-out);
+    }
+    .product-polaroid img {
+      display: block;
+      width: 100%;
+      height: auto;
+      background: #fff;
+    }
+    .product-polaroid__caption {
+      font-family: var(--font-serif); font-style: italic;
+      font-size: 0.78rem;
+      color: rgba(26,47,71,0.6);
+      text-align: center;
+      margin-top: 10px;
+      letter-spacing: 0.02em;
+    }
+
+    /* Hero product polaroid (posicionada absoluta sobre a foto da mulher) */
+    .hero-ed__product {
+      position: absolute;
+      top: var(--s6); right: var(--s8);
+      width: 160px;
+      z-index: 4;
+      transform: rotate(3deg);
+      transition: transform 600ms var(--ease-out);
+    }
+    .hero-ed__product:hover { transform: rotate(0deg) translateY(-4px); }
+    .hero-ed__product .product-polaroid__caption {
+      color: rgba(26,47,71,0.7);
+    }
+
+    /* Solution polaroid (sobreposta sobre a foto da seção solution) */
+    .solution__product {
+      position: absolute;
+      bottom: var(--s8); right: -20px;
+      width: 130px;
+      z-index: 3;
+      transform: rotate(-4deg);
+    }
+
     /* ── OFFER EDITORIAL — composição visual com fotos ── */
     .offer-ed {
       padding: var(--s20) 0;
@@ -1513,6 +1562,19 @@
       content: ''; width: 5px; height: 5px;
       border-radius: 50%; background: var(--gold-light);
     }
+    .offer-ed__bottle-real {
+      position: relative; z-index: 2;
+      width: 75%; max-width: 320px;
+      filter: drop-shadow(0 30px 50px rgba(15,45,74,0.25)) drop-shadow(0 10px 20px rgba(15,45,74,0.12));
+      transition: transform 600ms var(--ease-out);
+    }
+    .offer-ed__bottle-real:hover {
+      transform: translateY(-8px) rotate(-2deg);
+    }
+    .offer-ed__bottle-real img {
+      width: 100%; height: auto; display: block;
+    }
+
     .offer-ed__bottle {
       position: relative; z-index: 2;
       width: 60%; max-width: 240px;
@@ -1866,11 +1928,13 @@
 
       <div>
         <h1 class="hero-ed__title">
-          Cabelo, pele e<br>unhas que <em>falam<br>por você.</em>
+          Cabelo, pele e<br>
+          unhas que<br>
+          <em>falam por você.</em>
         </h1>
 
         <p class="hero-ed__sub">
-          Biotina (vitamina B7) em dose validada cientificamente. Produção farmacêutica, selo ANVISA — para resultado consistente em <strong>60 a 90 dias</strong>.
+          Biotina (45µg) com Luteína (10mg) — Stem Pharmaceutical. Produção farmacêutica e selo ANVISA para a saúde do cabelo, pele e unhas em <strong>60 a 90 dias</strong>.
         </p>
 
         <div class="hero-ed__cta-block">
@@ -1914,11 +1978,12 @@
            decoding="async">
       <div class="hero-ed__photo-overlay"></div>
 
-      <div class="hero-ed__bottle-badge">
-        <div class="hero-ed__bottle-badge-mark">B</div>
-        <div class="hero-ed__bottle-badge-text">
-          <strong>Biotina Plus</strong>
-          <small>Stem Pharmaceutical · 60 comp.</small>
+      <div class="hero-ed__product">
+        <div class="product-polaroid">
+          <img src="https://images.tcdn.com.br/img/img_prod/764720/90_biotina_plus_60_comprimidos_stem_245_1_74afff6a355b9b3c1b74082547c45970.jpg"
+               alt="Frasco Biotina Plus com Luteína - Stem Pharmaceutical"
+               loading="eager" decoding="async">
+          <div class="product-polaroid__caption">Biotina + Luteína · 60 comp.</div>
         </div>
       </div>
 
@@ -1954,8 +2019,8 @@
         </div>
 
         <div class="pain-photo reveal">
-          <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=800&q=85&auto=format&fit=crop"
-               alt="Closeup de mão com unhas" loading="lazy" decoding="async">
+          <img src="https://images.unsplash.com/photo-1604902396830-aca29e19b067?w=800&q=85&auto=format&fit=crop"
+               alt="Closeup de mão com unhas pintadas" loading="lazy" decoding="async">
           <div class="pain-photo__overlay"></div>
           <div class="pain-photo__num">02</div>
           <div class="pain-photo__body">
@@ -1992,6 +2057,13 @@
           <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=900&q=80&auto=format&fit=crop"
                alt="Mulher com cabelo brilhante e pele radiante"
                loading="lazy" decoding="async">
+          <div class="solution__product">
+            <div class="product-polaroid">
+              <img src="https://images.tcdn.com.br/img/img_prod/764720/90_biotina_plus_60_comprimidos_stem_245_1_74afff6a355b9b3c1b74082547c45970.jpg"
+                   alt="Biotina Plus" loading="lazy" decoding="async">
+              <div class="product-polaroid__caption">Biotina + Luteína</div>
+            </div>
+          </div>
           <div class="solution__visual-badge">
             <div class="solution__visual-badge-icon">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
@@ -2056,7 +2128,7 @@
           <div class="step__num">1</div>
           <h3 class="step__title">Você toma</h3>
           <p class="step__text">
-            <em>1 comprimido por dia</em>, com água, no horário que combinar com sua rotina. Biotina (vitamina B7) em formato Stem Pharmaceutical.
+            <em>1 comprimido por dia</em>, com água, no horário que combinar com sua rotina. <strong>45µg de biotina (B7) + 10mg de luteína</strong> por dose.
           </p>
         </div>
 
@@ -2107,7 +2179,7 @@
           </div>
           <div class="compare__cell compare__cell--right">
             <svg class="compare__icon compare__icon--good" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            <strong>Dose Stem Pharmaceutical</strong> em comprimido único
+            <strong>45µg biotina + 10mg luteína</strong> Stem Pharmaceutical
           </div>
         </div>
 
@@ -2295,13 +2367,10 @@
           <div class="offer-ed__sku-badge">SKU · PRA 186</div>
           <div class="offer-ed__pill">Stem Pharmaceutical</div>
 
-          <div class="offer-ed__bottle" aria-hidden="true">
-            <div class="offer-ed__bottle-label">
-              <div class="offer-ed__bottle-brand">Stem</div>
-              <div class="offer-ed__bottle-name">Biotina<br>Plus</div>
-              <div class="offer-ed__bottle-line">60 comprimidos</div>
-            </div>
-            <div class="offer-ed__bottle-dose">PRA 186</div>
+          <div class="offer-ed__bottle-real">
+            <img src="https://images.tcdn.com.br/img/img_prod/764720/90_biotina_plus_60_comprimidos_stem_245_1_74afff6a355b9b3c1b74082547c45970.jpg"
+                 alt="Frasco Biotina Plus com Luteína - 60 comprimidos"
+                 loading="lazy" decoding="async">
           </div>
 
           <div class="offer-ed__floating-photo offer-ed__floating-photo--1">
@@ -2318,9 +2387,9 @@
 
         <!-- DETAILS: editorial -->
         <div class="offer-ed__details">
-          <div class="offer-ed__breadcrumb">Stem · Nutrition · Biotina Plus</div>
-          <h3 class="offer-ed__name">Biotina <em>Plus.</em></h3>
-          <p class="offer-ed__sub">60 comprimidos · 2 meses de uso contínuo</p>
+          <div class="offer-ed__breadcrumb">Stem Pharmaceutical · PRA 186</div>
+          <h3 class="offer-ed__name">Biotina <em>+ Luteína.</em></h3>
+          <p class="offer-ed__sub">60 comprimidos · 45µg biotina + 10mg luteína · 2 meses de uso</p>
 
           <ul class="offer-ed__features">
             <li class="offer-ed__feature">
@@ -2450,7 +2519,7 @@
   <!-- ========== CTA FINAL — editorial com background image ========== -->
   <section class="cta-final cta-final--photo">
     <div class="cta-final__bg" aria-hidden="true">
-      <img src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=1800&q=85&auto=format&fit=crop"
+      <img src="https://images.unsplash.com/photo-1606902965551-dce093cda6e7?w=1800&q=85&auto=format&fit=crop"
            alt=""
            loading="lazy" decoding="async">
     </div>
