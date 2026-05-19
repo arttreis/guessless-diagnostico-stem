@@ -8,12 +8,12 @@
   <title>Biotina Plus — Cabelo, pele e unhas que falam por você | Stem</title>
   <meta name="description" content="Biotina Plus da Stem: dose validada, produção farmacêutica e selo ANVISA. Para cabelo mais forte, pele com viço e unhas que crescem sem quebrar.">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://loja.stem.com.br/biotina-plus">
+  <link rel="canonical" href="https://loja.stem.com.br/biotina-plus-60-comprimidos-stem">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Biotina Plus — Stem">
-  <meta property="og:description" content="Cabelo, pele e unhas que falam por você. Biotina em dose validada, com produção farmacêutica.">
-  <meta property="og:url" content="https://loja.stem.com.br/biotina-plus">
+  <meta property="og:title" content="Biotina Plus — Stem Pharmaceutical">
+  <meta property="og:description" content="60 comprimidos · 3x sem juros · Sem glúten, sem lactose. Biotina para saúde capilar, unhas e ação antioxidante.">
+  <meta property="og:url" content="https://loja.stem.com.br/biotina-plus-60-comprimidos-stem">
   <meta property="og:type" content="product">
   <meta property="og:image" content="[IMG_OG_BIOTINA_1200x630]">
 
@@ -60,19 +60,19 @@
   {
     "@context": "https://schema.org/",
     "@type": "Product",
-    "name": "Biotina Plus",
-    "image": "[IMG_FRASCO_BIOTINA]",
-    "description": "Biotina (vitamina B7) em dose validada cientificamente. Cofator essencial na síntese de queratina, fortalece cabelo, pele e unhas.",
+    "name": "Biotina Plus - 60 comprimidos",
+    "sku": "PRA 186",
+    "description": "Biotina (vitamina B7) em comprimido. Auxilia na formação de colágeno e elastina, contribui para a saúde capilar e das unhas, com ação antioxidante. Sem glúten, sem lactose.",
     "brand": {
       "@type": "Brand",
-      "name": "Stem"
+      "name": "Stem Pharmaceutical"
     },
     "category": "Suplementos / Nutrition",
     "offers": {
       "@type": "Offer",
-      "url": "https://loja.stem.com.br/biotina-plus",
+      "url": "https://loja.stem.com.br/biotina-plus-60-comprimidos-stem",
       "priceCurrency": "BRL",
-      "price": "[PRECO_PROMO]",
+      "price": "106.20",
       "availability": "https://schema.org/InStock",
       "itemCondition": "https://schema.org/NewCondition"
     }
@@ -1421,6 +1421,285 @@
       color: rgba(26,47,71,0.5);
     }
 
+    /* ── OFFER EDITORIAL — composição visual com fotos ── */
+    .offer-ed {
+      padding: var(--s20) 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 10% 50%, rgba(45,90,123,0.05) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 50% at 90% 30%, rgba(201,169,110,0.06) 0%, transparent 50%),
+        var(--linen);
+      position: relative;
+    }
+    .offer-ed__header {
+      text-align: center;
+      margin-bottom: var(--s12);
+    }
+    .offer-ed__header .ed-issue {
+      margin-bottom: var(--s4);
+    }
+    .offer-ed__title {
+      font-family: var(--font-serif); font-weight: 400;
+      font-size: clamp(2rem, 4.5vw, 3rem); line-height: 1.05;
+      letter-spacing: -0.015em;
+      color: var(--warm-white);
+      max-width: 640px; margin: 0 auto;
+    }
+    .offer-ed__title em {
+      font-style: italic; color: var(--primary);
+    }
+
+    .offer-ed__grid {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      gap: 0;
+      background: var(--warm-white-bg, #fff);
+      border-radius: var(--r-2xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--glass-border);
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* Visual editorial — composição com fotos sobrepostas */
+    .offer-ed__visual {
+      position: relative;
+      background: linear-gradient(180deg, #f1f4f7 0%, #d8e1eb 100%);
+      min-height: 600px;
+      overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+      padding: var(--s12);
+    }
+    .offer-ed__photo-bg {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center;
+      opacity: 0.42;
+      mix-blend-mode: multiply;
+    }
+    .offer-ed__visual-tint {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(circle at 50% 40%, rgba(255,255,255,0.4) 0%, transparent 70%),
+        linear-gradient(180deg, transparent 0%, rgba(15,45,74,0.08) 100%);
+    }
+    .offer-ed__sku-badge {
+      position: absolute; top: var(--s6); left: var(--s6);
+      font-family: var(--font-sans);
+      font-size: 0.66rem; font-weight: 700;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--primary);
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(8px);
+      padding: 0.4rem 0.8rem;
+      border-radius: var(--r-pill);
+      border: 1px solid rgba(45,90,123,0.15);
+      z-index: 3;
+    }
+    .offer-ed__pill {
+      position: absolute;
+      bottom: var(--s6); left: var(--s6);
+      display: inline-flex; align-items: center; gap: var(--s2);
+      background: var(--navy);
+      color: #fffefb;
+      font-size: 0.7rem; font-weight: 500;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      padding: 0.45rem 0.9rem;
+      border-radius: var(--r-pill);
+      z-index: 3;
+    }
+    .offer-ed__pill::before {
+      content: ''; width: 5px; height: 5px;
+      border-radius: 50%; background: var(--gold-light);
+    }
+    .offer-ed__bottle {
+      position: relative; z-index: 2;
+      width: 60%; max-width: 240px;
+      aspect-ratio: 0.6;
+      background: linear-gradient(180deg, rgba(255,255,255,0.98) 0%, #ebf0f5 60%, #c8d4e0 100%);
+      border: 1px solid rgba(15,45,74,0.08);
+      border-radius: 18px 18px 26px 26px;
+      box-shadow:
+        0 30px 60px rgba(15,45,74,0.18),
+        0 8px 24px rgba(15,45,74,0.10),
+        inset 0 1px 0 rgba(255,255,255,0.9);
+      display: flex; flex-direction: column; align-items: center;
+      padding: 18% 8% 12%; gap: 12%;
+      transition: transform 600ms var(--ease-out);
+    }
+    .offer-ed__bottle:hover {
+      transform: translateY(-6px) rotate(-1.5deg);
+    }
+    .offer-ed__bottle::before {
+      content: ''; position: absolute; top: -7%; left: 28%; right: 28%; height: 7%;
+      background: linear-gradient(180deg, var(--navy), #08172b);
+      border-radius: 5px 5px 2px 2px;
+    }
+    .offer-ed__bottle-label {
+      width: 100%; aspect-ratio: 1.4;
+      background: linear-gradient(180deg, var(--primary), var(--primary-hover));
+      border-radius: 10px;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      padding: 8%; text-align: center;
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.18),
+        0 6px 16px rgba(45,90,123,0.3);
+    }
+    .offer-ed__bottle-brand {
+      font-family: var(--font-serif); font-style: italic;
+      color: rgba(255,255,255,0.85); font-size: 0.78rem;
+      margin-bottom: 4px;
+    }
+    .offer-ed__bottle-name {
+      font-family: var(--font-serif); color: #fff;
+      font-size: 1.6rem; line-height: 1;
+      margin-bottom: 6px;
+    }
+    .offer-ed__bottle-line {
+      font-size: 0.5rem; font-weight: 700; letter-spacing: 0.22em;
+      text-transform: uppercase; color: rgba(255,255,255,0.75);
+    }
+    .offer-ed__bottle-dose {
+      font-size: 0.62rem; font-weight: 600;
+      color: rgba(15,45,74,0.5); letter-spacing: 0.14em;
+    }
+
+    /* Photo cards flutuantes — closeups */
+    .offer-ed__floating-photo {
+      position: absolute;
+      width: 130px; height: 130px;
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      box-shadow: 0 12px 32px rgba(15,45,74,0.18);
+      border: 4px solid #fff;
+      z-index: 3;
+    }
+    .offer-ed__floating-photo img {
+      width: 100%; height: 100%; object-fit: cover;
+    }
+    .offer-ed__floating-photo--1 {
+      top: 18%; right: 8%;
+      transform: rotate(6deg);
+      animation: float-tag 7s ease-in-out infinite;
+    }
+    .offer-ed__floating-photo--2 {
+      bottom: 18%; left: 4%;
+      transform: rotate(-5deg);
+      animation: float-tag 9s ease-in-out infinite reverse;
+    }
+
+    /* Details — lado direito */
+    .offer-ed__details {
+      padding: var(--s12) var(--s10);
+      display: flex; flex-direction: column;
+      gap: var(--s5);
+    }
+    .offer-ed__breadcrumb {
+      font-size: 0.7rem;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: rgba(26,47,71,0.5);
+      font-weight: 600;
+    }
+    .offer-ed__name {
+      font-family: var(--font-serif); font-weight: 400;
+      font-size: clamp(2.2rem, 4vw, 2.8rem);
+      line-height: 1; letter-spacing: -0.02em;
+      color: var(--warm-white);
+      margin: 0;
+    }
+    .offer-ed__name em {
+      font-style: italic; color: var(--primary);
+    }
+    .offer-ed__sub {
+      font-size: 0.95rem;
+      color: rgba(26,47,71,0.65);
+      margin: 0;
+    }
+    .offer-ed__features {
+      list-style: none;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: var(--s3);
+      padding: var(--s5) 0;
+      border-top: 1px solid rgba(15,45,74,0.08);
+      border-bottom: 1px solid rgba(15,45,74,0.08);
+    }
+    .offer-ed__feature {
+      display: flex; align-items: center; gap: var(--s2);
+      font-size: 0.82rem;
+      color: rgba(26,47,71,0.75);
+    }
+    .offer-ed__feature svg {
+      color: var(--primary); flex-shrink: 0;
+    }
+
+    .offer-ed__price-block {
+      padding: var(--s2) 0;
+    }
+    .offer-ed__price-label {
+      font-size: 0.66rem;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: rgba(26,47,71,0.4);
+      margin-bottom: var(--s2);
+      font-weight: 600;
+    }
+    .offer-ed__price {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      font-size: clamp(3rem, 5.5vw, 4rem);
+      line-height: 1;
+      color: var(--warm-white);
+      letter-spacing: -0.02em;
+      display: inline-flex; align-items: flex-start;
+    }
+    .offer-ed__price-currency {
+      font-size: 0.4em;
+      margin-right: 0.1em;
+      margin-top: 0.4em;
+      color: rgba(26,47,71,0.65);
+    }
+    .offer-ed__price-int {
+      /* main number */
+    }
+    .offer-ed__price-cents {
+      font-size: 0.4em;
+      margin-top: 0.4em;
+      color: rgba(26,47,71,0.5);
+    }
+    .offer-ed__installment {
+      font-size: 0.92rem;
+      color: rgba(26,47,71,0.7);
+      margin-top: var(--s2);
+    }
+    .offer-ed__installment strong {
+      color: var(--primary); font-weight: 600;
+    }
+
+    .offer-ed__cta {
+      margin-top: var(--s4);
+    }
+    .offer-ed__cta .btn {
+      width: 100%;
+    }
+    .offer-ed__trust {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: var(--s3);
+      padding-top: var(--s4);
+      border-top: 1px solid rgba(15,45,74,0.06);
+      font-size: 0.72rem;
+      color: rgba(26,47,71,0.55);
+    }
+    .offer-ed__trust-icons {
+      display: inline-flex; gap: 6px;
+    }
+    .offer-ed__trust-icons span {
+      background: rgba(15,45,74,0.04);
+      padding: 4px 7px; border-radius: 4px;
+      font-size: 0.62rem; font-weight: 700;
+      color: rgba(26,47,71,0.5);
+      letter-spacing: 0.05em;
+    }
+
     /* ── RESPONSIVE — Editorial ── */
     @media (max-width: 880px) {
       .hero-ed {
@@ -1446,6 +1725,14 @@
       .testimonial-ed--reverse .testimonial-ed__body { order: 2; }
       .testimonial-ed__body { padding: var(--s6); }
       .testimonial-ed__photo { aspect-ratio: 16 / 10; }
+
+      .offer-ed__grid { grid-template-columns: 1fr; }
+      .offer-ed__visual { min-height: 380px; padding: var(--s10); }
+      .offer-ed__bottle { width: 50%; max-width: 200px; }
+      .offer-ed__details { padding: var(--s8) var(--s6); }
+      .offer-ed__features { grid-template-columns: 1fr; }
+      .offer-ed__floating-photo--1 { top: 12%; right: 6%; width: 90px; height: 90px; }
+      .offer-ed__floating-photo--2 { bottom: 12%; left: 4%; width: 90px; height: 90px; }
     }
 
     /* ============================================
@@ -1566,7 +1853,7 @@
 
   <!-- ========== TOP BAR ========== -->
   <div class="topbar" role="region" aria-label="Promoção">
-    <strong>Frete grátis acima de R$ [FRETE_MIN]</strong> · Cupom <strong>BIOTINA10</strong> · 10% off no primeiro pedido
+    <strong>Stem Pharmaceutical</strong> · 60 comprimidos · 3x sem juros · Frete grátis a partir de R$ 199*
   </div>
 
   <!-- ========== HERO EDITORIAL ========== -->
@@ -1587,7 +1874,7 @@
         </p>
 
         <div class="hero-ed__cta-block">
-          <a href="[URL_CHECKOUT_BIOTINA]"
+          <a href="https://loja.stem.com.br/biotina-plus-60-comprimidos-stem"
              class="btn btn--primary btn--lg cta-link"
              data-cta-position="hero"
              target="_blank"
@@ -1631,13 +1918,13 @@
         <div class="hero-ed__bottle-badge-mark">B</div>
         <div class="hero-ed__bottle-badge-text">
           <strong>Biotina Plus</strong>
-          <small>Linha Nutrition · [DOSAGEM_MCG]mcg</small>
+          <small>Stem Pharmaceutical · 60 comp.</small>
         </div>
       </div>
 
       <div class="hero-ed__caption">
         <div class="hero-ed__caption-num">— ph. 01 / Maria, 34, 90 dias depois</div>
-        <div class="hero-ed__caption-text">Resultado real de uma rotina simples, com 1 cápsula por dia.</div>
+        <div class="hero-ed__caption-text">Resultado real de uma rotina simples, com 1 comprimido por dia.</div>
       </div>
     </div>
   </section>
@@ -1667,7 +1954,7 @@
         </div>
 
         <div class="pain-photo reveal">
-          <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=800&q=85&auto=format&fit=crop"
+          <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=800&q=85&auto=format&fit=crop"
                alt="Closeup de mão com unhas" loading="lazy" decoding="async">
           <div class="pain-photo__overlay"></div>
           <div class="pain-photo__num">02</div>
@@ -1679,7 +1966,7 @@
         </div>
 
         <div class="pain-photo reveal">
-          <img src="https://images.unsplash.com/photo-1614108300040-9b46cf1d57a4?w=800&q=85&auto=format&fit=crop"
+          <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=800&q=85&auto=format&fit=crop"
                alt="Closeup de pele de mulher" loading="lazy" decoding="async">
           <div class="pain-photo__overlay"></div>
           <div class="pain-photo__num">03</div>
@@ -1711,14 +1998,14 @@
             </div>
             <div class="solution__visual-badge-text">
               <strong>60 dias depois</strong>
-              Resultado de uma rotina simples, com 1 cápsula por dia.
+              Resultado de uma rotina simples, com 1 comprimido por dia.
             </div>
           </div>
         </div>
 
         <div class="solution__copy reveal">
           <span class="section__eyebrow">A Solução</span>
-          <h2 class="section__title">Uma cápsula, três <em>resultados visíveis.</em></h2>
+          <h2 class="section__title">Um comprimido, três <em>resultados visíveis.</em></h2>
           <p class="section__subtitle">
             Biotina Plus é a vitamina B7 na dose certa, em formato vegetal e com pureza farmacêutica. Pensada para quem quer ver — e sentir — a diferença.
           </p>
@@ -1743,11 +2030,10 @@
           </ul>
 
           <div class="solution__chips">
-            <span class="chip">Vegano</span>
             <span class="chip">Sem glúten</span>
             <span class="chip">Sem lactose</span>
-            <span class="chip">Cápsula vegetal</span>
-            <!-- [VALIDAR_COMPOSICAO]: confirmar com regulatório/fabricação -->
+            <span class="chip">Stem Pharmaceutical</span>
+            <span class="chip">60 comprimidos</span>
           </div>
         </div>
       </div>
@@ -1770,7 +2056,7 @@
           <div class="step__num">1</div>
           <h3 class="step__title">Você toma</h3>
           <p class="step__text">
-            <em>1 cápsula por dia</em>, com água, no horário que combinar com sua rotina. [DOSAGEM_MCG] mcg de biotina (B7) por dose.
+            <em>1 comprimido por dia</em>, com água, no horário que combinar com sua rotina. Biotina (vitamina B7) em formato Stem Pharmaceutical.
           </p>
         </div>
 
@@ -1792,7 +2078,7 @@
       </div>
 
       <p class="science__close reveal">
-        Cada cápsula é uma <strong>instrução bioquímica</strong> para o seu corpo lembrar de produzir o que parou de produzir.
+        Cada comprimido é uma <strong>instrução bioquímica</strong> para o seu corpo lembrar de produzir o que parou de produzir.
       </p>
     </div>
   </section>
@@ -1821,7 +2107,7 @@
           </div>
           <div class="compare__cell compare__cell--right">
             <svg class="compare__icon compare__icon--good" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            <strong>[DOSAGEM_MCG] mcg</strong> validada cientificamente
+            <strong>Dose Stem Pharmaceutical</strong> em comprimido único
           </div>
         </div>
 
@@ -1905,13 +2191,13 @@
                loading="lazy" decoding="async">
           <div class="showcase__caption">
             <div class="showcase__caption-eyebrow">Rotina</div>
-            <div class="showcase__caption-text">1 cápsula por dia. Sem ritual complicado.</div>
+            <div class="showcase__caption-text">1 comprimido por dia. Sem ritual complicado.</div>
           </div>
         </div>
 
         <div class="showcase__item" style="grid-column: 2 / span 2;">
-          <img src="https://images.unsplash.com/photo-1583209814883-c00e7b9fae1a?w=900&q=80&auto=format&fit=crop"
-               alt="Mulher tomando suplemento com copo d'água"
+          <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=900&q=80&auto=format&fit=crop"
+               alt="Mão segurando cápsula de suplemento"
                loading="lazy" decoding="async">
           <div class="showcase__caption">
             <div class="showcase__caption-eyebrow">Unhas</div>
@@ -1984,60 +2270,103 @@
       </div>
 
       <p class="proof__footer reveal">
-        Mais de <strong>[VALIDAR_NUMERO]+ clientes Stem</strong> já incorporaram a Biotina Plus na rotina.
+        <strong>Clientes Stem</strong> em todo o Brasil já incorporaram a Biotina Plus na rotina.
       </p>
     </div>
   </section>
 
-  <!-- ========== OFFER ========== -->
-  <section class="section">
+  <!-- ========== OFFER EDITORIAL ========== -->
+  <section class="offer-ed">
     <div class="container">
-      <div class="offer__card reveal">
-        <div class="offer__visual" aria-hidden="true">
-          <div class="hero__bottle" style="width: 80%;">
-            <div class="hero__bottle-label">
-              <div class="hero__bottle-brand">Stem</div>
-              <div class="hero__bottle-name">Biotina<br>Plus</div>
-              <div class="hero__bottle-line">Nutrition</div>
+      <div class="offer-ed__header reveal">
+        <div class="ed-issue ed-issue--dark" style="justify-content: center; margin: 0 auto var(--s4);">— pedido —</div>
+        <h2 class="offer-ed__title">Tudo o que sua rotina<br>precisa em <em>um comprimido.</em></h2>
+      </div>
+
+      <div class="offer-ed__grid reveal">
+        <!-- VISUAL: composição com foto + mockup + tags flutuantes -->
+        <div class="offer-ed__visual">
+          <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=1200&q=85&auto=format&fit=crop"
+               alt=""
+               class="offer-ed__photo-bg"
+               loading="lazy" decoding="async">
+          <div class="offer-ed__visual-tint"></div>
+
+          <div class="offer-ed__sku-badge">SKU · PRA 186</div>
+          <div class="offer-ed__pill">Stem Pharmaceutical</div>
+
+          <div class="offer-ed__bottle" aria-hidden="true">
+            <div class="offer-ed__bottle-label">
+              <div class="offer-ed__bottle-brand">Stem</div>
+              <div class="offer-ed__bottle-name">Biotina<br>Plus</div>
+              <div class="offer-ed__bottle-line">60 comprimidos</div>
             </div>
-            <div class="hero__bottle-dose">[DOSAGEM_MCG] MCG · 60 CÁPSULAS</div>
+            <div class="offer-ed__bottle-dose">PRA 186</div>
+          </div>
+
+          <div class="offer-ed__floating-photo offer-ed__floating-photo--1">
+            <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=400&q=85&auto=format&fit=crop"
+                 alt="Closeup de comprimido"
+                 loading="lazy" decoding="async">
+          </div>
+          <div class="offer-ed__floating-photo offer-ed__floating-photo--2">
+            <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400&q=85&auto=format&fit=crop"
+                 alt="Mulher com pele radiante"
+                 loading="lazy" decoding="async">
           </div>
         </div>
 
-        <div class="offer__details">
-          <span class="offer__tag">Oferta de lançamento</span>
-          <h2 class="offer__name">Biotina Plus</h2>
-          <p class="offer__claim">60 cápsulas · 2 meses de uso contínuo</p>
+        <!-- DETAILS: editorial -->
+        <div class="offer-ed__details">
+          <div class="offer-ed__breadcrumb">Stem · Nutrition · Biotina Plus</div>
+          <h3 class="offer-ed__name">Biotina <em>Plus.</em></h3>
+          <p class="offer-ed__sub">60 comprimidos · 2 meses de uso contínuo</p>
 
-          <div class="offer__price-row">
-            <span class="offer__price-old">R$ [PRECO_CHEIO]</span>
-            <span class="offer__price">
-              R$ [PRECO_PROMO_INT]<span class="offer__price-cents">,[PRECO_PROMO_CENT]</span>
-            </span>
-          </div>
-          <p class="offer__installment">
-            ou <strong>[PARCELAMENTO]x</strong> sem juros · <strong>5% off no Pix</strong>
-          </p>
+          <ul class="offer-ed__features">
+            <li class="offer-ed__feature">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+              Sem glúten
+            </li>
+            <li class="offer-ed__feature">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+              Sem lactose
+            </li>
+            <li class="offer-ed__feature">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+              Stem Pharmaceutical
+            </li>
+            <li class="offer-ed__feature">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+              Entrega Brasil
+            </li>
+          </ul>
 
-          <div class="offer__guarantee">
-            <svg class="offer__guarantee-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            <p class="offer__guarantee-text">
-              <strong>Garantia de 30 dias.</strong> Tomou e não gostou? A gente devolve seu dinheiro. Sem pergunta. <!-- [VALIDAR_GARANTIA] -->
+          <div class="offer-ed__price-block">
+            <div class="offer-ed__price-label">Investimento</div>
+            <div class="offer-ed__price">
+              <span class="offer-ed__price-currency">R$</span>
+              <span class="offer-ed__price-int">106</span>
+              <span class="offer-ed__price-cents">,20</span>
+            </div>
+            <p class="offer-ed__installment">
+              ou <strong>3x de R$ 35,40</strong> sem juros · Frete grátis a partir de R$ 199*
             </p>
           </div>
 
-          <a href="[URL_CHECKOUT_BIOTINA]"
-             class="btn btn--primary btn--lg btn--full cta-link"
-             data-cta-position="oferta"
-             target="_blank"
-             rel="noopener">
-            <span>Comprar agora</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-          </a>
+          <div class="offer-ed__cta">
+            <a href="https://loja.stem.com.br/biotina-plus-60-comprimidos-stem"
+               class="btn btn--primary btn--lg cta-link"
+               data-cta-position="oferta"
+               target="_blank"
+               rel="noopener">
+              <span>Comprar na loja Stem</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+          </div>
 
-          <div class="offer__payments">
+          <div class="offer-ed__trust">
             <span>Pagamento seguro:</span>
-            <div class="offer__payments-icons">
+            <div class="offer-ed__trust-icons">
               <span>VISA</span><span>MASTER</span><span>ELO</span><span>PIX</span><span>BOLETO</span>
             </div>
           </div>
@@ -2061,7 +2390,7 @@
             <span class="faq__icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
           </summary>
           <div class="faq__body">
-            <p>Os primeiros sinais costumam aparecer entre <strong>30 e 45 dias</strong>: unhas mais firmes, fios novos crescendo, pele com mais viço. O resultado pleno acontece em <strong>até 90 dias</strong> de uso contínuo. Por isso a embalagem traz 60 cápsulas — para garantir os 2 primeiros meses sem pausas. <!-- [VALIDAR_TIMELINE] --></p>
+            <p>Os primeiros sinais costumam aparecer entre <strong>30 e 45 dias</strong>: unhas mais firmes, fios novos crescendo, pele com mais viço. O resultado pleno acontece em <strong>até 90 dias</strong> de uso contínuo. Por isso a embalagem traz <strong>60 comprimidos</strong> — para garantir os 2 primeiros meses sem pausas.</p>
           </div>
         </details>
 
@@ -2091,7 +2420,7 @@
             <span class="faq__icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
           </summary>
           <div class="faq__body">
-            <p>Enviamos para todo o Brasil via Correios e transportadoras parceiras. Prazo médio: <strong>3 a 7 dias úteis</strong> após a confirmação do pagamento. Frete grátis acima de R$ [FRETE_MIN] em todo o território nacional.</p>
+            <p>Enviamos para todo o Brasil via Correios e transportadoras parceiras. Prazo médio: <strong>3 a 7 dias úteis</strong> após a confirmação do pagamento. <strong>Frete grátis</strong> acima de R$ 199 (Sul/Sudeste) ou R$ 299 (Norte/Nordeste).</p>
           </div>
         </details>
 
@@ -2121,7 +2450,7 @@
   <!-- ========== CTA FINAL — editorial com background image ========== -->
   <section class="cta-final cta-final--photo">
     <div class="cta-final__bg" aria-hidden="true">
-      <img src="https://images.unsplash.com/photo-1583209814883-c00e7b9fae1a?w=1800&q=85&auto=format&fit=crop"
+      <img src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=1800&q=85&auto=format&fit=crop"
            alt=""
            loading="lazy" decoding="async">
     </div>
@@ -2136,7 +2465,7 @@
         <p class="cta-final__sub">
           Cabelo, pele e unhas que voltam ao que eram. Em 60 dias você se reconhece de novo no espelho.
         </p>
-        <a href="[URL_CHECKOUT_BIOTINA]"
+        <a href="https://loja.stem.com.br/biotina-plus-60-comprimidos-stem"
            class="btn btn--primary btn--xl btn--pulse cta-link"
            data-cta-position="final"
            target="_blank"
@@ -2148,15 +2477,15 @@
         <div class="cta-final__micro">
           <span>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-            Frete grátis acima de R$ [FRETE_MIN]
+            Frete grátis acima de R$ 199
           </span>
           <span>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-            5% off no Pix
+            3x sem juros
           </span>
           <span>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-            Garantia de 30 dias
+            Stem Pharmaceutical
           </span>
         </div>
       </div>
@@ -2289,48 +2618,48 @@
   </script>
 
   <!-- ============================================
-       PLACEHOLDERS A SUBSTITUIR (busque por colchetes ou TODO)
+       DADOS REAIS APLICADOS (de loja.stem.com.br)
        ============================================
-       URL e tracking:
-         [URL_CHECKOUT_BIOTINA]    — URL real do produto em loja.stem.com.br
-         SEU_PIXEL_ID_AQUI          — Meta Pixel ID (descomentar bloco)
-         SEU_ID_AQUI                — Google GA4 ID (descomentar bloco)
-         [IMG_FRASCO_BIOTINA]       — foto real do frasco (substituir bloco .hero__bottle por <img>)
-         [IMG_OG_BIOTINA_1200x630]  — imagem Open Graph (compartilhamento social)
+       Produto:    Biotina Plus - 60 comprimidos - Stem Pharmaceutical
+       URL:        https://loja.stem.com.br/biotina-plus-60-comprimidos-stem
+       SKU:        PRA 186
+       Preço:      R$ 106,20 (3x sem juros = R$ 35,40)
+       Forma:      Comprimido (não cápsula)
+       Composição: Sem glúten · Sem lactose
+       Frete grátis: R$ 199 (Sul/Sudeste) · R$ 299 (Norte/Nordeste)
+       Claims oficiais: colágeno · elastina · capilar · unhas · antioxidante
 
-       Imagens lifestyle (já implementadas via Unsplash — trocar pelas fotos da campanha quando houver):
-         .hero-ed__photo            — foto vertical full-bleed do hero (substituir pela foto da campanha)
-         .pain-photo img × 3        — fotos das dores (cabelo / unhas / pele)
-         .showcase__item img × 4    — galeria editorial (cabelo, pele, cápsulas, lifestyle)
-         .solution__visual img      — foto da seção solução (mulher resultado)
-         .testimonial-ed img × 3    — fotos verticais grandes dos testimonials (via i.pravatar.cc)
-         .cta-final__bg img         — background do CTA final
-         [ANO]                       — ano em que cada cliente começou a usar (testimonials)
+       ============================================
+       PLACEHOLDERS QUE AINDA PRECISAM SER PREENCHIDOS:
+       ============================================
 
-       Produto:
-         [DOSAGEM_MCG]              — dose por cápsula em mcg (ex: 5000)
-         [VALIDAR_COMPOSICAO]       — chips vegano/sem glúten/sem lactose — confirmar com fabricação
-         [VALIDAR_CLAIM]            — claims funcionais sobre benefícios — revisar com regulatório/ANVISA
-         [VALIDAR_TIMELINE]         — prazos 30-45d / 90d para resultado — validar com nutricionista
+       Tracking (substituir IDs e descomentar blocos):
+         SEU_PIXEL_ID_AQUI           — Meta Pixel ID
+         SEU_ID_AQUI                 — Google GA4 ID
 
-       Comercial:
-         [PRECO_CHEIO]              — preço cheio (ex: 89,90)
-         [PRECO_PROMO_INT]          — parte inteira do preço promocional (ex: 69)
-         [PRECO_PROMO_CENT]         — parte decimal (ex: 90)
-         [PRECO_PROMO]              — preço promocional completo (no JSON-LD, ex: 69.90)
-         [PARCELAMENTO]             — número máx de parcelas sem juros (ex: 6)
-         [FRETE_MIN]                — valor mínimo para frete grátis (ex: 150)
-         [CUPOM_VALOR]              — % de desconto do cupom BIOTINA10
-         [VALIDAR_GARANTIA]         — política real de 30 dias — confirmar com financeiro/CX
+       Imagens (atualmente Unsplash + pravatar.cc — trocar pelas fotos oficiais da campanha):
+         .hero-ed__photo             — foto vertical full-bleed do hero
+         .pain-photo img × 3         — fotos das dores (cabelo / unhas / pele)
+         .showcase__item img × 4     — galeria editorial
+         .solution__visual img       — foto da seção solução
+         .testimonial-ed img × 3     — fotos verticais grandes dos testimonials
+         .cta-final__bg img          — background do CTA final
+         .offer-ed__photo-bg         — foto de fundo da seção oferta
+         .offer-ed__floating-photo × 2 — polaroids sobrepostas na oferta
+         [IMG_FRASCO_BIOTINA]        — foto real do frasco (substituir os mockups CSS)
+         [IMG_OG_BIOTINA_1200x630]   — imagem Open Graph (compartilhamento social)
 
-       Prova social:
-         [DEPOIMENTO_1..3]          — depoimentos reais (NUNCA inventar)
-         [NOME_1..3], [CIDADE_1..3] — autores dos depoimentos
-         [VALIDAR_NUMERO]           — quantidade de clientes Stem que usam Biotina Plus
+       Prova social (NUNCA inventar — pedir aos clientes reais):
+         [DEPOIMENTO_1..3]           — texto do depoimento real
+         [NOME_1..3], [CIDADE_1..3]  — autores dos depoimentos
+         [ANO]                       — ano em que cada cliente começou a usar
 
-       Outros:
-         [VALIDAR_CONTRAINDICACAO]  — texto sobre TSH/exames — confirmar com nutricionista
-         [VALIDAR_ASSINATURA]       — programa de assinatura — confirmar se existe; remover FAQ se não
+       Revisão regulatória pendente (revisar antes de subir tráfego pago):
+         Hero subhead "60 a 90 dias"            — validar timeline com nutricionista
+         Science step "30-45 dias / 90 dias"    — validar timeline com nutricionista
+         FAQ contraindicação (TSH em altas doses) — confirmar texto com nutricionista
+         FAQ assinatura recorrente              — confirmar se existe ou remover pergunta
+         Claims funcionais detalhados           — revisar com regulatório/ANVISA
   ============================================ -->
 
 </body>
